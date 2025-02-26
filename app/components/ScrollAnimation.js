@@ -1,10 +1,12 @@
 "use client"
 import { useEffect, useRef } from 'react';
 
-export function ScrollAnimation({ children, className, delay = 0 }) {
+export function ScrollAnimation({ children, className = '', delay = 0 }) {
   const ref = useRef(null);
 
   useEffect(() => {
+    if (!ref.current) return;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,9 +26,7 @@ export function ScrollAnimation({ children, className, delay = 0 }) {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(ref.current);
 
     return () => {
       if (ref.current) {
@@ -36,7 +36,7 @@ export function ScrollAnimation({ children, className, delay = 0 }) {
   }, [delay]);
 
   return (
-    <div ref={ref} className={`scroll-animation ${className || ''}`}>
+    <div ref={ref} className={`scroll-animation ${className}`}>
       {children}
     </div>
   );

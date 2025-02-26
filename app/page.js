@@ -1,12 +1,14 @@
 "use client"
-import Navbar from '../components/Navbar';
+import Navbar from './components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { ScrollAnimation } from './components/ScrollAnimation';
+import { useTheme } from './context/ThemeContext';
 
 export default function Home() {
   const canvasRef = useRef(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!canvasRef.current) return;
@@ -33,7 +35,7 @@ export default function Home() {
         this.size = Math.random() * 2 + 0.5;
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
-        this.color = '#16a34a';
+        this.color = theme === 'dark' ? '#22c55e' : '#16a34a'; // Adjust color based on theme
         this.alpha = Math.random() * 0.4 + 0.1;
       }
       
@@ -61,6 +63,7 @@ export default function Home() {
     
     // Create particles
     const createParticles = () => {
+      particles = []; // Clear existing particles when recreating
       const particleCount = Math.min(Math.floor(window.innerWidth / 20), 50);
       for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
@@ -79,7 +82,7 @@ export default function Home() {
           
           if (distance < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = '#16a34a';
+            ctx.strokeStyle = theme === 'dark' ? '#22c55e' : '#16a34a'; // Adjust color based on theme
             ctx.globalAlpha = 0.15 * (1 - distance / 120);
             ctx.lineWidth = 0.7;
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -122,7 +125,7 @@ export default function Home() {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     }
-  }, []);
+  }, [theme]); // Re-run when theme changes
 
   return (
     <div className="min-h-screen">
@@ -133,7 +136,7 @@ export default function Home() {
       <section className="pt-32 pb-20 px-6 min-h-screen relative flex items-center">
         <canvas 
           ref={canvasRef} 
-          className="absolute top-0 left-0 w-full h-full bg-white"
+          className="absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-900 transition-colors duration-300"
         />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <ScrollAnimation className="mb-6">
@@ -143,7 +146,7 @@ export default function Home() {
           </ScrollAnimation>
           
           <ScrollAnimation className="mb-12 max-w-3xl mx-auto" delay={100}>
-            <p className="text-xl md:text-2xl text-gray-600">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
               Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken.
             </p>
           </ScrollAnimation>
@@ -162,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 bg-gray-50 min-h-screen flex items-center">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-gray-800 min-h-screen flex items-center transition-colors duration-300">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <ScrollAnimation>
             <div className="relative aspect-square w-full max-w-md mx-auto">
@@ -185,8 +188,8 @@ export default function Home() {
             <div className="space-y-6">
               <ScrollAnimation delay={100}>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-green-600">Persoonlijke aanpak</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold mb-2 text-green-600 dark:text-green-400">Persoonlijke aanpak</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
                     Ik werk nauw samen met jou om precies te begrijpen wat jij, en belangrijker nog, jouw klanten nodig hebben. Geen standaard templates, maar een website die perfect past bij jouw bedrijf.
                   </p>
                 </div>
@@ -194,8 +197,8 @@ export default function Home() {
               
               <ScrollAnimation delay={200}>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-green-600">Focus op resultaat</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold mb-2 text-green-600 dark:text-green-400">Focus op resultaat</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
                     Je krijgt niet zomaar een mooie website, maar een effectief instrument dat klanten aantrekt.
                   </p>
                 </div>
@@ -203,8 +206,8 @@ export default function Home() {
               
               <ScrollAnimation delay={300}>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-green-600">Technische expertise</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-semibold mb-2 text-green-600 dark:text-green-400">Technische expertise</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
                     Met jarenlange ervaring in webdevelopment zorg ik voor een snelle, veilige en gebruiksvriendelijke website die perfect werkt op alle apparaten.
                   </p>
                 </div>

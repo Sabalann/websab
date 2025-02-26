@@ -1,5 +1,5 @@
 "use client"
-import Navbar from '../../components/Navbar';
+import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ScrollAnimation } from '../components/ScrollAnimation';
@@ -15,12 +15,12 @@ export default function OverMij() {
           <div className="space-y-6">
             <ScrollAnimation>
               <h1 className="text-4xl md:text-5xl font-bold">
-                Hey, ik ben <span className="text-green-600">Sab</span>
+                Hey, ik ben <span className="text-green-600 dark:text-green-400">Sab</span>
               </h1>
             </ScrollAnimation>
             
             <ScrollAnimation delay={100}>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600 dark:text-gray-300">
                 Als web developer help ik ondernemers hun online aanwezigheid naar het volgende niveau te tillen. Met meer dan [X] jaar ervaring weet ik precies wat werkt en wat niet.
               </p>
             </ScrollAnimation>
@@ -40,7 +40,7 @@ export default function OverMij() {
       </section>
 
       {/* Journey Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="max-w-3xl mx-auto space-y-12">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-center">Mijn Reis</h2>
@@ -49,30 +49,30 @@ export default function OverMij() {
           <div className="space-y-8">
             <ScrollAnimation delay={100}>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div className="w-full sm:w-28 shrink-0 text-green-600 font-semibold">2023 - Heden</div>
+                <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">2023 - Heden</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Bachelor Computer Science</h3>
-                  <p className="text-gray-600">In 2024 ben ik begonnen aan mijn bacheloropleiding Computer Science aan de Universiteit Utrecht. Hier leer ik van alles over software development, waaronder web development. Ook hebben we het vaak over UX design en AI, wat mij enorm heef geholpn in mijn journey als web developer.</p>
+                  <p className="text-gray-600 dark:text-gray-300">In 2023 ben ik begonnen aan mijn bacheloropleiding Computer Science aan de Universiteit Utrecht. Hier leer ik van alles over software development, waaronder web development. Ook hebben we het vaak over UX design en AI, wat mij enorm heef geholpn in mijn journey als web developer.</p>
                 </div>
               </div>
             </ScrollAnimation>
             
             <ScrollAnimation delay={200}>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div className="w-full sm:w-28 shrink-0 text-green-600 font-semibold">2024</div>
+                <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">2024</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Eerste Grote Project</h3>
-                  <p className="text-gray-600">In 2024 ben ik begonnen met het ontwikkelen van mijn eigen websites. Ik ben begonnen met HTML, CSS en JavaScript. Later heb ik geëxperimenteed met veel frameworks, waarna ik mezelf specialiseerde in React. Momenteel gebruik ik Next.js, React, en Tailwind voor mijn projecten.</p>
+                  <p className="text-gray-600 dark:text-gray-300">In 2024 ben ik begonnen met het ontwikkelen van mijn eigen websites. Ik ben begonnen met HTML, CSS en JavaScript. Later heb ik geëxperimenteed met veel frameworks, waarna ik mezelf specialiseerde in React. Momenteel gebruik ik Next.js, React, en Tailwind voor mijn projecten.</p>
                 </div>
               </div>
             </ScrollAnimation>
             
             <ScrollAnimation delay={300}>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div className="w-full sm:w-28 shrink-0 text-green-600 font-semibold">Nu</div>
+                <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">Nu</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Waar ik nu sta</h3>
-                  <p className="text-gray-600">Vertel over je huidige focus en expertise.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Vertel over je huidige focus en expertise.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -81,7 +81,7 @@ export default function OverMij() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold text-center mb-12">Waar ik in geloof</h2>
@@ -89,23 +89,23 @@ export default function OverMij() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollAnimation delay={100}>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="font-semibold text-xl mb-4 text-green-600">Kwaliteit Boven Alles</h3>
-                <p className="text-gray-600">Ik geloof in het leveren van hoogwaardige websites die niet alleen mooi zijn, maar ook perfect functioneren.</p>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-colors duration-300">
+                <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Kwaliteit Boven Alles</h3>
+                <p className="text-gray-600 dark:text-gray-300">Ik geloof in het leveren van hoogwaardige websites die niet alleen mooi zijn, maar ook perfect functioneren.</p>
               </div>
             </ScrollAnimation>
             
             <ScrollAnimation delay={200}>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="font-semibold text-xl mb-4 text-green-600">Persoonlijke Aandacht</h3>
-                <p className="text-gray-600">Elk project krijgt mijn volledige aandacht. Ik geloof in nauwe samenwerking met mijn klanten.</p>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-colors duration-300">
+                <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Persoonlijke Aandacht</h3>
+                <p className="text-gray-600 dark:text-gray-300">Elk project krijgt mijn volledige aandacht. Ik geloof in nauwe samenwerking met mijn klanten.</p>
               </div>
             </ScrollAnimation>
             
             <ScrollAnimation delay={300}>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="font-semibold text-xl mb-4 text-green-600">Continu Leren</h3>
-                <p className="text-gray-600">De technologie staat niet stil, en ik ook niet. Ik blijf mezelf constant ontwikkelen.</p>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-colors duration-300">
+                <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Continu Leren</h3>
+                <p className="text-gray-600 dark:text-gray-300">De technologie staat niet stil, en ik ook niet. Ik blijf mezelf constant ontwikkelen.</p>
               </div>
             </ScrollAnimation>
           </div>
@@ -113,14 +113,14 @@ export default function OverMij() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-green-50">
+      <section className="py-20 px-6 bg-green-50 dark:bg-green-900/20 transition-colors duration-300">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold">Klaar om samen te werken?</h2>
           </ScrollAnimation>
           
           <ScrollAnimation delay={100}>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Laten we samen jouw ideale website bouwen.
             </p>
           </ScrollAnimation>
