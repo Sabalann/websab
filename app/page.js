@@ -153,8 +153,8 @@ export default function Home() {
           
           <ScrollAnimation delay={200}>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link href="/build" className="btn-primary btn-lg">
-                Start jouw project
+              <Link href="/prijzen" className="btn-primary btn-lg">
+                Bekijk prijzen
               </Link>
               <Link href="/portfolio" className="btn-secondary btn-lg">
                 Bekijk portfolio
@@ -214,12 +214,20 @@ export default function Home() {
               </ScrollAnimation>
               
               <ScrollAnimation delay={400}>
-                <Link 
-                  href="/aanpak" 
-                  className="btn-link gap-2"
-                >
-                  Leer meer over mijn aanpak <span>→</span>
-                </Link>
+                <div className="flex gap-4 mt-8">
+                  <Link 
+                    href="/prijzen" 
+                    className="btn-primary"
+                  >
+                    Bekijk prijzen
+                  </Link>
+                  <Link 
+                    href="/aanpak" 
+                    className="btn-secondary"
+                  >
+                    Leer meer over mijn aanpak
+                  </Link>
+                </div>
               </ScrollAnimation>
             </div>
           </div>

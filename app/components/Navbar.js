@@ -49,6 +49,12 @@ export default function Navbar() {
               Portfolio
             </Link>
             <Link 
+              href="/prijzen" 
+              className="btn-nav"
+            >
+              Prijzen
+            </Link>
+            <Link 
               href="/contact" 
               className="btn-contact ml-2"
             >
@@ -110,6 +116,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Portfolio
+            </Link>
+            <Link 
+              href="/prijzen" 
+              className="btn-nav block w-full text-left"
+              onClick={() => setIsOpen(false)}
+            >
+              Prijzen
             </Link>
             <Link 
               href="/contact" 
