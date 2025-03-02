@@ -1,8 +1,12 @@
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './context/ThemeContext';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({ 
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Sab - Webdeveloper',
@@ -11,8 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="nl" className="scroll-smooth">
-      <body className={`${inter.className} bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300`}>
+    <html lang="nl" className={`scroll-smooth ${outfit.variable}`}>
+      <body className={`${outfit.className} bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

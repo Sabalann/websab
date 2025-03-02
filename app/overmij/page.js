@@ -27,13 +27,18 @@ export default function OverMij() {
           </div>
           
           <ScrollAnimation delay={200}>
-            <div className="relative aspect-square w-full max-w-md mx-auto">
-              <Image 
-                src="/about-hero.jpg" 
-                fill
-                className="object-cover rounded-2xl shadow-lg"
-                alt="Portret foto" 
-              />
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-lg -z-10"></div>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-lg -z-10"></div>
+              <div className="relative aspect-square w-full max-w-md mx-auto">
+                <Image 
+                  src="/profile.jpeg" 
+                  fill
+                  className="object-cover rounded-lg shadow-lg"
+                  alt="Portret foto" 
+                  objectPosition="center 20%"
+                />
+              </div>
             </div>
           </ScrollAnimation>
         </div>
@@ -52,7 +57,7 @@ export default function OverMij() {
                 <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">2023 - Heden</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Bachelor Computer Science</h3>
-                  <p className="text-gray-600 dark:text-gray-300">In 2023 ben ik begonnen aan mijn bacheloropleiding Computer Science aan de Universiteit Utrecht. Hier leer ik van alles over software development, waaronder web development. Ook hebben we het vaak over UX design en AI, wat mij enorm heef geholpn in mijn journey als web developer.</p>
+                  <p className="text-gray-600 dark:text-gray-300">In 2024 ben ik begonnen aan mijn bacheloropleiding Computer Science aan de Universiteit Utrecht. Hier leer ik van alles over software development, waaronder web development. Ook hebben we het vaak over UX design en AI, wat mij enorm heef geholpn in mijn journey als web developer.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -89,21 +94,21 @@ export default function OverMij() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollAnimation delay={100}>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-colors duration-300">
+              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Kwaliteit Boven Alles</h3>
                 <p className="text-gray-600 dark:text-gray-300">Ik geloof in het leveren van hoogwaardige websites die niet alleen mooi zijn, maar ook perfect functioneren.</p>
               </div>
             </ScrollAnimation>
             
             <ScrollAnimation delay={200}>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-colors duration-300">
+              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Persoonlijke Aandacht</h3>
                 <p className="text-gray-600 dark:text-gray-300">Elk project krijgt mijn volledige aandacht. Ik geloof in nauwe samenwerking met mijn klanten.</p>
               </div>
             </ScrollAnimation>
             
             <ScrollAnimation delay={300}>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm transition-colors duration-300">
+              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Continu Leren</h3>
                 <p className="text-gray-600 dark:text-gray-300">De technologie staat niet stil, en ik ook niet. Ik blijf mezelf constant ontwikkelen.</p>
               </div>
@@ -112,8 +117,8 @@ export default function OverMij() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-green-50 dark:bg-green-900/20 transition-colors duration-300">
+      {/* CTA Section - Fixed contrast issues */}
+      <section className="py-20 px-6 bg-green-50 dark:bg-gray-800">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold">Klaar om samen te werken?</h2>
