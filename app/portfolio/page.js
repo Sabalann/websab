@@ -98,7 +98,7 @@ export default async function Portfolio() {
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold">
-              Klaar om jouw project te starten?
+              Ben je geïnspireerd geraakt?
             </h2>
           </ScrollAnimation>
           

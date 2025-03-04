@@ -23,57 +23,409 @@
 }
 
 @layer components {
-  .hero-background {
+  /* Unique diagonal sections */
+  .diagonal-top {
     position: relative;
-    overflow: hidden;
-    background: linear-gradient(to bottom, rgba(240, 253, 244, 1), white);
   }
-
-  .wave {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    bottom: 0;
-    left: 0;
-    opacity: 0.15;
-    transform-origin: bottom;
-  }
-
-  .wave::before {
+  
+  .diagonal-top::before {
     content: '';
     position: absolute;
-    width: 200%;
-    height: 100%;
-    left: -50%;
-    background-image: 
-      radial-gradient(circle at 50% 100%, transparent 25%, #16a34a 26%),
-      radial-gradient(circle at 50% 100%, transparent 20%, #16a34a 21%);
-    background-size: 50px 100px;
-    background-position: 0 100%;
-    animation: waveMove 8s linear infinite;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: inherit;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
   }
-
-  .wave:nth-child(2) {
-    opacity: 0.1;
-    height: 120px;
+  
+  .diagonal-bottom {
+    position: relative;
   }
-
-  .wave:nth-child(2)::before {
-    animation-duration: 10s;
-    animation-direction: reverse;
-    background-image: 
-      radial-gradient(circle at 50% 100%, transparent 25%, #15803d 26%),
-      radial-gradient(circle at 50% 100%, transparent 20%, #15803d 21%);
-    background-size: 60px 120px;
+  
+  .diagonal-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: inherit;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    z-index: 1;
   }
-
-  @keyframes waveMove {
+  
+  /* Floating elements animation */
+  .float {
+    animation: floating 4s ease-in-out infinite;
+  }
+  
+  .float-delayed {
+    animation: floating 4s ease-in-out 1s infinite;
+  }
+  
+  @keyframes floating {
     0% {
-      transform: translateX(0);
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
     }
     100% {
-      transform: translateX(50%);
+      transform: translateY(0px);
     }
+  }
+  
+  /* Morphing background */
+  .morphing-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .morphing-bg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, 
+                            var(--color-primaryLight) 0%, 
+                            transparent 50%);
+    animation: morphing 15s ease-in-out infinite alternate;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  
+  @keyframes morphing {
+    0% {
+      transform: translate(0, 0) scale(1);
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+    34% {
+      transform: translate(5%, 5%) scale(1.05);
+      border-radius: 70% 30% 50% 50% / 30% 40% 70% 60%;
+    }
+    67% {
+      transform: translate(-5%, -5%) scale(0.95);
+      border-radius: 30% 60% 30% 70% / 50% 60% 30% 40%;
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+  }
+  
+  /* Glitch effect for text */
+  .glitch {
+    position: relative;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(44px, 450px, 56px, 0);
+  }
+  
+  .glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--color-primary);
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+  
+  .glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--color-accent);
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-anim {
+    0% {
+      clip: rect(12px, 9999px, 94px, 0);
+      transform: skew(0.55deg);
+    }
+    5% {
+      clip: rect(89px, 9999px, 65px, 0);
+      transform: skew(0.13deg);
+    }
+    10% {
+      clip: rect(41px, 9999px, 31px, 0);
+      transform: skew(0.86deg);
+    }
+    15% {
+      clip: rect(20px, 9999px, 5px, 0);
+      transform: skew(0.58deg);
+    }
+    20% {
+      clip: rect(89px, 9999px, 52px, 0);
+      transform: skew(0.29deg);
+    }
+    25% {
+      clip: rect(18px, 9999px, 8px, 0);
+      transform: skew(0.66deg);
+    }
+    30% {
+      clip: rect(81px, 9999px, 74px, 0);
+      transform: skew(0.89deg);
+    }
+    35% {
+      clip: rect(5px, 9999px, 80px, 0);
+      transform: skew(0.41deg);
+    }
+    40% {
+      clip: rect(88px, 9999px, 6px, 0);
+      transform: skew(0.42deg);
+    }
+    45% {
+      clip: rect(64px, 9999px, 34px, 0);
+      transform: skew(0.76deg);
+    }
+    50% {
+      clip: rect(82px, 9999px, 42px, 0);
+      transform: skew(0.15deg);
+    }
+    55% {
+      clip: rect(36px, 9999px, 11px, 0);
+      transform: skew(0.01deg);
+    }
+    60% {
+      clip: rect(41px, 9999px, 29px, 0);
+      transform: skew(0.69deg);
+    }
+    65% {
+      clip: rect(97px, 9999px, 45px, 0);
+      transform: skew(0.5deg);
+    }
+    70% {
+      clip: rect(36px, 9999px, 43px, 0);
+      transform: skew(0.93deg);
+    }
+    75% {
+      clip: rect(9px, 9999px, 38px, 0);
+      transform: skew(0.23deg);
+    }
+    80% {
+      clip: rect(71px, 9999px, 21px, 0);
+      transform: skew(0.01deg);
+    }
+    85% {
+      clip: rect(70px, 9999px, 66px, 0);
+      transform: skew(0.47deg);
+    }
+    90% {
+      clip: rect(1px, 9999px, 79px, 0);
+      transform: skew(0.05deg);
+    }
+    95% {
+      clip: rect(90px, 9999px, 93px, 0);
+      transform: skew(0.52deg);
+    }
+    100% {
+      clip: rect(13px, 9999px, 32px, 0);
+      transform: skew(0.84deg);
+    }
+  }
+  
+  @keyframes glitch-anim2 {
+    0% {
+      clip: rect(80px, 9999px, 2px, 0);
+      transform: skew(0.07deg);
+    }
+    5% {
+      clip: rect(7px, 9999px, 12px, 0);
+      transform: skew(0.23deg);
+    }
+    10% {
+      clip: rect(12px, 9999px, 22px, 0);
+      transform: skew(0.39deg);
+    }
+    15% {
+      clip: rect(16px, 9999px, 76px, 0);
+      transform: skew(0.01deg);
+    }
+    20% {
+      clip: rect(63px, 9999px, 30px, 0);
+      transform: skew(0.18deg);
+    }
+    25% {
+      clip: rect(67px, 9999px, 29px, 0);
+      transform: skew(0.75deg);
+    }
+    30% {
+      clip: rect(100px, 9999px, 49px, 0);
+      transform: skew(0.89deg);
+    }
+    35% {
+      clip: rect(37px, 9999px, 93px, 0);
+      transform: skew(0.63deg);
+    }
+    40% {
+      clip: rect(95px, 9999px, 47px, 0);
+      transform: skew(0.02deg);
+    }
+    45% {
+      clip: rect(17px, 9999px, 16px, 0);
+      transform: skew(0.74deg);
+    }
+    50% {
+      clip: rect(42px, 9999px, 80px, 0);
+      transform: skew(0.64deg);
+    }
+    55% {
+      clip: rect(51px, 9999px, 42px, 0);
+      transform: skew(0.07deg);
+    }
+    60% {
+      clip: rect(37px, 9999px, 51px, 0);
+      transform: skew(0.87deg);
+    }
+    65% {
+      clip: rect(83px, 9999px, 43px, 0);
+      transform: skew(0.1deg);
+    }
+    70% {
+      clip: rect(9px, 9999px, 30px, 0);
+      transform: skew(0.44deg);
+    }
+    75% {
+      clip: rect(32px, 9999px, 17px, 0);
+      transform: skew(0.13deg);
+    }
+    80% {
+      clip: rect(5px, 9999px, 94px, 0);
+      transform: skew(0.02deg);
+    }
+    85% {
+      clip: rect(5px, 9999px, 71px, 0);
+      transform: skew(0.07deg);
+    }
+    90% {
+      clip: rect(2px, 9999px, 8px, 0);
+      transform: skew(0.67deg);
+    }
+    95% {
+      clip: rect(12px, 9999px, 75px, 0);
+      transform: skew(0.2deg);
+    }
+    100% {
+      clip: rect(55px, 9999px, 41px, 0);
+      transform: skew(0.73deg);
+    }
+  }
+  
+  @keyframes glitch-skew {
+    0% {
+      transform: skew(1deg);
+    }
+    10% {
+      transform: skew(-1deg);
+    }
+    20% {
+      transform: skew(0deg);
+    }
+    30% {
+      transform: skew(-0.5deg);
+    }
+    40% {
+      transform: skew(0.5deg);
+    }
+    50% {
+      transform: skew(-0.2deg);
+    }
+    60% {
+      transform: skew(0.2deg);
+    }
+    70% {
+      transform: skew(0deg);
+    }
+    80% {
+      transform: skew(-0.3deg);
+    }
+    90% {
+      transform: skew(0.3deg);
+    }
+    100% {
+      transform: skew(0deg);
+    }
+  }
+  
+  /* 3D Card Effect */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+  
+  .card-3d:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(5deg) translateZ(20px);
+  }
+  
+  /* Energy balls animation */
+  .energy-ball {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+  }
+  
+  /* Blob buttons */
+  .blob-btn {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .blob-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: -1;
+  }
+  
+  .blob-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  
+  /* Shiny button effect */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 70%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: transform 0.6s ease;
+  }
+  
+  .btn-shine:hover::after {
+    transform: rotate(30deg) translateX(200%);
   }
 
   /* Selection styling */
@@ -87,10 +439,24 @@
     @apply px-3 py-2 rounded-md text-sm font-medium transition-all duration-200
     dark:text-gray-300 hover:text-gray-800 dark:hover:text-white;
     color: var(--color-primaryDark);
+    position: relative;
+    overflow: hidden;
   }
   
-  .btn-nav:hover {
-    color: var(--color-primary);
+  .btn-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .btn-nav:hover::after {
+    width: 70%;
   }
   
   /* Primary buttons */
@@ -98,10 +464,28 @@
     @apply inline-flex items-center justify-center px-6 py-3 text-white font-medium rounded-md shadow-sm transition-all duration-300
     hover:translate-y-[-2px] hover:shadow-md active:translate-y-[0px];
     background-color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 70%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: transform 0.6s ease;
   }
   
   .btn-primary:hover {
     background-color: var(--color-primaryHover);
+  }
+  
+  .btn-primary:hover::after {
+    transform: rotate(30deg) translateX(200%);
   }
 
   /* Secondary buttons */
@@ -110,6 +494,36 @@
     dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white hover:translate-y-[-2px] hover:shadow-md active:translate-y-[0px];
     border-color: var(--color-primary);
     color: var(--color-primaryDark);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+    z-index: -1;
+  }
+  
+  .btn-secondary:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .btn-secondary:hover {
+    color: white;
+    border-color: transparent;
+  }
+  
+  .dark .btn-secondary:hover {
+    color: white;
   }
 
   /* Large button variant */
@@ -122,20 +536,57 @@
     @apply inline-flex items-center justify-center px-4 py-2 text-white text-sm font-medium rounded-md shadow-sm transition-all duration-300
     hover:translate-y-[-2px] hover:shadow-md active:translate-y-[0px];
     background-color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-contact::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 70%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: transform 0.6s ease;
   }
   
   .btn-contact:hover {
     background-color: var(--color-primaryHover);
+  }
+  
+  .btn-contact:hover::after {
+    transform: rotate(30deg) translateX(200%);
   }
 
   /* Link style buttons */
   .btn-link {
     @apply inline-flex items-center font-medium transition-colors duration-150;
     color: var(--color-primary);
+    position: relative;
+  }
+  
+  .btn-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
   }
   
   .btn-link:hover {
     color: var(--color-primaryHover);
+  }
+  
+  .btn-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
   /* Section backgrounds */
@@ -179,7 +630,7 @@
   .scroll-animation {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
   }
 
   .scroll-animation.is-visible {

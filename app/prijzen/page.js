@@ -230,7 +230,7 @@ export default function Prijzen() {
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Zijn er verborgen kosten?</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Nee, we maken vooraf een duidelijke offerte met alle kosten. Hosting en domeinregistratie zijn aparte jaarlijkse kosten die we transparant communiceren.
+                    Nee, we maken vooraf een duidelijke offerte met alle kosten. Hosting en domeinregistratie zijn aparte jaarlijkse of maandelijkse kosten die we transparant communiceren.
                   </p>
                 </div>
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-xl">

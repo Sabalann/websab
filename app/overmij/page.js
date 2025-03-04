@@ -21,7 +21,7 @@ export default function OverMij() {
             
             <ScrollAnimation delay={100}>
               <p className="text-xl text-gray-600 dark:text-gray-300">
-                Als web developer help ik ondernemers hun online aanwezigheid naar het volgende niveau te tillen. Met meer dan [X] jaar ervaring weet ik precies wat werkt en wat niet.
+                Als web developer help ik ondernemers hun online aanwezigheid naar het volgende niveau te tillen.
               </p>
             </ScrollAnimation>
           </div>
@@ -57,7 +57,7 @@ export default function OverMij() {
                 <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">2023 - Heden</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Bachelor Computer Science</h3>
-                  <p className="text-gray-600 dark:text-gray-300">In 2024 ben ik begonnen aan mijn bacheloropleiding Computer Science aan de Universiteit Utrecht. Hier leer ik van alles over software development, waaronder web development. Ook hebben we het vaak over UX design en AI, wat mij enorm heef geholpn in mijn journey als web developer.</p>
+                  <p className="text-gray-600 dark:text-gray-300">In 2023 begon ik aan mijn bachelor Computer Science aan de Universiteit Utrecht. Hier ontwikkelde ik een sterke basis in software development, UX-design en AI — kennis die ik dagelijks toepas in mijn werk als webdeveloper.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -67,7 +67,7 @@ export default function OverMij() {
                 <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">2024</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Eerste Grote Project</h3>
-                  <p className="text-gray-600 dark:text-gray-300">In 2024 ben ik begonnen met het ontwikkelen van mijn eigen websites. Ik ben begonnen met HTML, CSS en JavaScript. Later heb ik geëxperimenteed met veel frameworks, waarna ik mezelf specialiseerde in React. Momenteel gebruik ik Next.js, React, en Tailwind voor mijn projecten.</p>
+                  <p className="text-gray-600 dark:text-gray-300">In 2024 ben ik begonnen met het ontwikkelen van mijn eigen websites. Ik ben begonnen met HTML, CSS en JavaScript. Later heb ik geëxperimenteerd met veel frameworks, waarna ik mezelf specialiseerde in React. Momenteel werk ik vooral met Next.js, React en Tailwind CSS — tools waarmee ik snelle en schaalbare websites bouw.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -77,7 +77,7 @@ export default function OverMij() {
                 <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">Nu</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Waar ik nu sta</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Vertel over je huidige focus en expertise.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Als freelance webdeveloper richt ik me op het bouwen van op maat gemaakte websites die bedrijven helpen groeien. Ik combineer technische expertise met een scherp oog voor design en gebruikerservaring.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -103,14 +103,14 @@ export default function OverMij() {
             <ScrollAnimation delay={200}>
               <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Persoonlijke Aandacht</h3>
-                <p className="text-gray-600 dark:text-gray-300">Elk project krijgt mijn volledige aandacht. Ik geloof in nauwe samenwerking met mijn klanten.</p>
+                <p className="text-gray-600 dark:text-gray-300">Elk project krijgt mijn volledige aandacht. Door nauw samen te werken en regelmatig af te stemmen, zorg ik ervoor dat het eindresultaat perfect aansluit bij de wensen en behoeften van mijn klanten.</p>
               </div>
             </ScrollAnimation>
             
             <ScrollAnimation delay={300}>
               <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Continu Leren</h3>
-                <p className="text-gray-600 dark:text-gray-300">De technologie staat niet stil, en ik ook niet. Ik blijf mezelf constant ontwikkelen.</p>
+                <h3 className="font-semibold text-xl mb-4 text-green-600 dark:text-green-400">Transparantie</h3>
+                <p className="text-gray-600 dark:text-gray-300">Ik geloof in open communicatie en transparantie. Ik geef je een helder overzicht van het werk dat ik voor je uitvoer en ik geef je constant updates over het progressie van je project. Ook zullen we altijd de kosten van te voren afspreken.</p>
               </div>
             </ScrollAnimation>
           </div>
