@@ -32,66 +32,67 @@ export default function Home() {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
+        this.size = Math.random() * 8 + 4; // Bigger size for leaves
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 + 0.5; // Falling motion
         this.color = theme === 'dark' ? '#22c55e' : '#16a34a';
-        this.alpha = Math.random() * 0.4 + 0.1;
+        this.alpha = Math.random() * 0.6 + 0.2;
+        this.rotation = Math.random() * Math.PI; // Random rotation
+        this.rotationSpeed = (Math.random() - 0.5) * 0.02; // Rotation animation
       }
       
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
+        this.rotation += this.rotationSpeed; // Rotate the leaf
         
-        if (this.x < 0 || this.x > canvas.width) {
-          this.speedX = -this.speedX;
+        // Reset position when leaf falls below screen
+        if (this.y > canvas.height) {
+          this.y = -10;
+          this.x = Math.random() * canvas.width;
         }
         
-        if (this.y < 0 || this.y > canvas.height) {
-          this.speedY = -this.speedY;
-        }
+        // Wrap around sides
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
       }
       
       draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
         ctx.globalAlpha = this.alpha;
+        
+        // Draw leaf shape
+        ctx.beginPath();
+        ctx.moveTo(0, -this.size/2);
+        ctx.bezierCurveTo(
+          this.size/2, -this.size/2,
+          this.size/2, this.size/2,
+          0, this.size/2
+        );
+        ctx.bezierCurveTo(
+          -this.size/2, this.size/2,
+          -this.size/2, -this.size/2,
+          0, -this.size/2
+        );
+        
+        ctx.fillStyle = this.color;
         ctx.fill();
+        ctx.restore();
       }
     }
     
     // Create particles
     const createParticles = () => {
-      particles = []; // Clear existing particles when recreating
-      const particleCount = Math.min(Math.floor(window.innerWidth / 20), 50);
+      particles = [];
+      const particleCount = Math.min(Math.floor(window.innerWidth / 40), 25); // Fewer leaves
       for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
       }
     }
     
     createParticles();
-    
-    // Connect particles with lines if they are close enough
-    const connectParticles = () => {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 120) {
-            ctx.beginPath();
-            ctx.strokeStyle = theme === 'dark' ? '#22c55e' : '#16a34a';
-            ctx.globalAlpha = 0.15 * (1 - distance / 120);
-            ctx.lineWidth = 0.7;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-    }
     
     // Animation loop
     const animate = () => {
@@ -102,7 +103,6 @@ export default function Home() {
         particles[i].draw();
       }
       
-      connectParticles();
       animationFrameId = requestAnimationFrame(animate);
     }
     
@@ -121,16 +121,97 @@ export default function Home() {
       <Navbar/>
 
       {/* Hero Section with morphing background and floating elements */}
-      <section className="pt-32 pb-20 px-6 min-h-screen relative flex items-center morphing-bg overflow-hidden">
-        {/* Floating decorative elements */}
-        <div className="absolute top-1/4 right-1/4 w-20 h-20 rounded-full float bg-green-100 dark:bg-green-800/40 opacity-40"></div>
-        <div className="absolute bottom-1/3 left-1/5 w-32 h-32 rounded-full float-delayed bg-green-200 dark:bg-green-900/40 opacity-20"></div>
-        <div className="absolute top-1/3 left-1/4 w-16 h-16 rounded-md transform rotate-45 float bg-green-200 dark:bg-green-900/40 opacity-20"></div>
-        
+      <section className="pt-32 pb-20 px-6 min-h-screen relative flex items-center overflow-hidden">
         <canvas 
           ref={canvasRef} 
           className="absolute top-0 left-0 w-full h-full"
         />
+        
+        {/* Tree Illustration */}
+        <div className="absolute inset-0 z-0 opacity-15">
+          <svg viewBox="0 0 1000 1000" className="w-full h-full">
+            {/* Main trunk */}
+            <path
+              d="M480,900 Q500,700 500,600 Q490,500 510,400 Q520,300 500,200"
+              stroke="currentColor"
+              strokeWidth="40"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            
+            {/* Main branches */}
+            <path
+              d="M510,400 Q600,380 650,320 Q700,260 720,200"
+              stroke="currentColor"
+              strokeWidth="20"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            <path
+              d="M490,400 Q400,380 350,320 Q300,260 280,200"
+              stroke="currentColor"
+              strokeWidth="20"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            <path
+              d="M510,500 Q580,480 620,440 Q660,400 680,360"
+              stroke="currentColor"
+              strokeWidth="15"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            <path
+              d="M490,500 Q420,480 380,440 Q340,400 320,360"
+              stroke="currentColor"
+              strokeWidth="15"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            
+            {/* Smaller branches */}
+            <path
+              d="M720,200 Q740,180 760,170 M720,200 Q730,220 750,230"
+              stroke="currentColor"
+              strokeWidth="10"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            <path
+              d="M280,200 Q260,180 240,170 M280,200 Q270,220 250,230"
+              stroke="currentColor"
+              strokeWidth="10"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            
+            {/* Foliage */}
+            <path
+              d="M500,50 Q650,50 750,150 Q850,250 800,400 Q750,550 650,600 Q550,650 500,650 Q450,650 350,600 Q250,550 200,400 Q150,250 250,150 Q350,50 500,50"
+              className="fill-green-600 dark:fill-green-500 opacity-90"
+            />
+            <path
+              d="M500,100 Q620,100 700,180 Q780,260 740,380 Q700,500 620,540 Q540,580 500,580 Q460,580 380,540 Q300,500 260,380 Q220,260 300,180 Q380,100 500,100"
+              className="fill-green-500 dark:fill-green-400 opacity-80"
+            />
+            
+            {/* Roots */}
+            <path
+              d="M480,900 Q400,920 320,900 Q250,880 200,920"
+              stroke="currentColor"
+              strokeWidth="15"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+            <path
+              d="M520,900 Q600,920 680,900 Q750,880 800,920"
+              stroke="currentColor"
+              strokeWidth="15"
+              fill="none"
+              className="text-green-900 dark:text-green-800"
+            />
+          </svg>
+        </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <ScrollAnimation className="mb-8">
