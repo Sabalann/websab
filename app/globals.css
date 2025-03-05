@@ -619,7 +619,7 @@
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
@@ -629,72 +629,48 @@
 
   .scroll-animation {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    animation: fadeInUp 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+    animation-play-state: paused;
   }
 
   .scroll-animation.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+    animation-play-state: running;
   }
 
-  /* Gradient text - fixed version */
-  .gradient-text {
-    position: relative;
-    display: inline-block;
-    color: var(--color-primary);
-  }
-  
-  .gradient-text::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    z-index: 1;
-  }
-
-  /* Delay classes */
+  /* Delay classes for scroll animations */
   .delay-100 {
-    transition-delay: 0.1s;
+    animation-delay: 0.1s;
   }
 
   .delay-200 {
-    transition-delay: 0.2s;
+    animation-delay: 0.2s;
   }
 
   .delay-300 {
-    transition-delay: 0.3s;
+    animation-delay: 0.3s;
   }
 
   .delay-400 {
-    transition-delay: 0.4s;
+    animation-delay: 0.4s;
   }
 
   .delay-500 {
-    transition-delay: 0.5s;
+    animation-delay: 0.5s;
   }
 
-  /* Old fade-in animation (keeping for compatibility) */
+  /* Simple fade-in animation */
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
     }
   }
 
   .fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
     opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
   /* Prose styling for article content */
@@ -787,6 +763,75 @@
       opacity: 1;
       transform: scaleX(1);
     }
+  }
+
+  /* Organic section dividers */
+  .section-divider {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,120 C300,90 600,120 900,90 C1000,80 1100,90 1200,100 L1200,120 L0,120 Z' fill='%23dcfce7' /%3E%3Cpath d='M300,95 C310,95 315,85 320,83 C325,85 330,95 300,95' fill='%2322c55e' /%3E%3Cpath d='M700,85 C710,85 715,75 720,73 C725,75 730,85 700,85' fill='%2322c55e' /%3E%3Cpath d='M1000,98 C1010,98 1015,88 1020,86 C1025,88 1030,98 1000,98' fill='%2322c55e' /%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* Corner decorations */
+  .corner-decoration {
+    position: relative;
+  }
+
+  .corner-decoration::before,
+  .corner-decoration::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+  }
+
+  .corner-decoration::before {
+    top: -10px;
+    left: -10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath d='M5,45 C15,45 20,35 25,33 C30,35 35,45 5,45' fill='%2322c55e' transform='rotate(-45 25 25)' /%3E%3C/svg%3E");
+  }
+
+  .corner-decoration::after {
+    bottom: -10px;
+    right: -10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath d='M5,45 C15,45 20,35 25,33 C30,35 35,45 5,45' fill='%2322c55e' transform='rotate(135 25 25)' /%3E%3C/svg%3E");
+  }
+
+  .dark .section-divider::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,120 C300,90 600,120 900,90 C1000,80 1100,90 1200,100 L1200,120 L0,120 Z' fill='%23166534' /%3E%3Cpath d='M300,95 C310,95 315,85 320,83 C325,85 330,95 300,95' fill='%2322c55e' /%3E%3Cpath d='M700,85 C710,85 715,75 720,73 C725,75 730,85 700,85' fill='%2322c55e' /%3E%3Cpath d='M1000,98 C1010,98 1015,88 1020,86 C1025,88 1030,98 1000,98' fill='%2322c55e' /%3E%3C/svg%3E");
+  }
+
+  /* Card decorations */
+  .card-decoration {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-decoration::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M80,20 C60,20 50,10 45,5 C40,10 30,20 80,20' fill='%2322c55e' opacity='0.1' /%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
   }
 }
 
