@@ -32,11 +32,11 @@ export default function Home() {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 0.2 - 0.1;
+        this.speedY = Math.random() * 0.2 - 0.1;
         this.color = theme === 'dark' ? '#22c55e' : '#16a34a';
-        this.alpha = Math.random() * 0.4 + 0.1;
+        this.alpha = Math.random() * 0.6 + 0.2;
       }
       
       update() {
@@ -63,8 +63,8 @@ export default function Home() {
     
     // Create particles
     const createParticles = () => {
-      particles = []; // Clear existing particles when recreating
-      const particleCount = Math.min(Math.floor(window.innerWidth / 20), 50);
+      particles = [];
+      const particleCount = Math.min(Math.floor(window.innerWidth / 40), 30);
       for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
       }
@@ -80,11 +80,11 @@ export default function Home() {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          if (distance < 120) {
+          if (distance < 180) {
             ctx.beginPath();
             ctx.strokeStyle = theme === 'dark' ? '#22c55e' : '#16a34a';
-            ctx.globalAlpha = 0.15 * (1 - distance / 120);
-            ctx.lineWidth = 0.7;
+            ctx.globalAlpha = 0.2 * (1 - distance / 180);
+            ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
@@ -120,13 +120,8 @@ export default function Home() {
       {/* Navigation */}
       <Navbar/>
 
-      {/* Hero Section with morphing background and floating elements */}
-      <section className="pt-32 pb-20 px-6 min-h-screen relative flex items-center morphing-bg overflow-hidden">
-        {/* Floating decorative elements */}
-        <div className="absolute top-1/4 right-1/4 w-20 h-20 rounded-full float bg-green-100 dark:bg-green-800/40 opacity-40"></div>
-        <div className="absolute bottom-1/3 left-1/5 w-32 h-32 rounded-full float-delayed bg-green-200 dark:bg-green-900/40 opacity-20"></div>
-        <div className="absolute top-1/3 left-1/4 w-16 h-16 rounded-md transform rotate-45 float bg-green-200 dark:bg-green-900/40 opacity-20"></div>
-        
+      {/* Hero Section with particles */}
+      <section className="pt-32 pb-20 px-6 min-h-screen relative flex items-center overflow-hidden">
         <canvas 
           ref={canvasRef} 
           className="absolute top-0 left-0 w-full h-full"
