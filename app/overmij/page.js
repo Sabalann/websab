@@ -54,7 +54,7 @@ export default function OverMij() {
           <div className="space-y-8">
             <ScrollAnimation delay={100}>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">2023 - Heden</div>
+                <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">2023</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Bachelor Computer Science</h3>
                   <p className="text-gray-600 dark:text-gray-300">In 2023 begon ik aan mijn bachelor Computer Science aan de Universiteit Utrecht. Hier ontwikkelde ik een sterke basis in software development, UX-design en AI — kennis die ik dagelijks toepas in mijn werk als webdeveloper.</p>

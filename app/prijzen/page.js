@@ -30,7 +30,7 @@ export default function Prijzen() {
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold mb-2">Starter Website</h2>
                   <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-4">
-                    Vanaf €750
+                    Vanaf €500
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
                     Perfect voor kleine ondernemers die net beginnen.
@@ -70,15 +70,12 @@ export default function Prijzen() {
             <ScrollAnimation delay={200}>
               <div className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-5 right-5">
-                  <span className="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 text-sm font-medium px-3 py-1 rounded-full">
-                    Populair
-                  </span>
                 </div>
                 
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold mb-2">Professional Website</h2>
                   <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-4">
-                    Vanaf €1.500
+                    Vanaf €1.000
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
                     Voor bedrijven die willen groeien.
@@ -230,19 +227,19 @@ export default function Prijzen() {
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Zijn er verborgen kosten?</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Nee, we maken vooraf een duidelijke offerte met alle kosten. Hosting en domeinregistratie zijn aparte jaarlijkse of maandelijkse kosten die we transparant communiceren.
+                    Nee, ik maak vooraf een duidelijke offerte met alle kosten. Hosting en domeinregistratie zijn aparte jaarlijkse of maandelijkse kosten die we transparant communiceren.
                   </p>
                 </div>
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Hoe zit het met onderhoud?</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    We bieden optionele onderhoudscontracten aan voor updates, backups en technische ondersteuning. Dit bespreken we na oplevering van je website.
+                    Ik bied optionele onderhoudscontracten aan voor updates, backups en technische ondersteuning. Dit bespreken we na oplevering van je website.
                   </p>
                 </div>
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Kan ik mijn website later uitbreiden?</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Ja, we bouwen je website zo dat deze makkelijk uit te breiden is. We kunnen altijd nieuwe functionaliteiten toevoegen wanneer je bedrijf groeit.
+                    Ja, ik bouw je website zo dat deze makkelijk uit te breiden is. We kunnen altijd nieuwe functionaliteiten toevoegen wanneer je bedrijf groeit.
                   </p>
                 </div>
               </div>
