@@ -133,16 +133,16 @@ export default function OverMij() {
           <ScrollAnimation delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/build" 
+                href="/contact" 
                 className="btn-primary btn-lg"
               >
                 Start jouw project
               </Link>
               <Link 
-                href="/aanpak" 
+                href="/prijzen" 
                 className="btn-secondary btn-lg"
               >
-                Bekijk mijn aanpak
+                Bekijk prijzen
               </Link>
             </div>
           </ScrollAnimation>

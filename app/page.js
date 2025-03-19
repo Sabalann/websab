@@ -218,10 +218,10 @@ export default function Home() {
                     Bekijk prijzen
                   </Link>
                   <Link 
-                    href="/aanpak" 
+                    href="/overmij" 
                     className="btn-secondary"
                   >
-                    Leer meer over mijn aanpak
+                    Meer over mij
                   </Link>
                 </div>
               </ScrollAnimation>
