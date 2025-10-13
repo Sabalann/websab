@@ -17,22 +17,12 @@ export default function Prijzen() {
                 Transparante prijzen voor jouw website
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300">
-                De kosten van een website zijn afhankelijk van verschillende factoren. Hieronder vind je een overzicht van wat je kunt verwachten.
+                De kosten van een website zijn moeilijk van te voren te bepalen, er kunnen altijd problemen of aanpassingen optreden die je niet van te voren verwacht. Wel kunnen we, nadat het project duidelijk is, een schatting maken waar we allebei vanuit kunnen gaan. Hieronder vind je een overzicht van wat je kunt verwachten.
               </p>
             </div>
           </ScrollAnimation>
 
-          {/* Central CTA */}
-          <ScrollAnimation delay={400}>
-            <div className="text-center mb-24">
-              <Link 
-                href="/contact"
-                className="btn-primary text-center text-lg px-12 py-4"
-              >
-                Plan een vrijblijvend gesprek
-              </Link>
-            </div>
-          </ScrollAnimation>
+
 
           {/* Additional Info */}
           <ScrollAnimation delay={500}>
@@ -75,6 +65,17 @@ export default function Prijzen() {
             </div>
           </ScrollAnimation>
 
+          {/* Central CTA */}
+          <ScrollAnimation delay={400}>
+            <div className="text-center mb-24">
+              <Link 
+                href="/contact"
+                className="btn-primary text-center text-lg px-12 py-4">
+                Plan een vrijblijvend gesprek
+              </Link>
+            </div>
+          </ScrollAnimation>
+
           {/* FAQ Section */}
           <ScrollAnimation delay={600}>
             <div className="max-w-3xl mx-auto mt-16">
@@ -83,7 +84,7 @@ export default function Prijzen() {
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold mb-2">Zijn er verborgen kosten?</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Nee, ik maak vooraf een duidelijke offerte met alle kosten. Hosting en domeinregistratie zijn aparte jaarlijkse of maandelijkse kosten die we transparant communiceren.
+                    Nee, voordat ik jouw website bouw, bespreken we alle kosten. Als bepaalde aanpassingen niet meer in het budget passen, zullen we samen kijken wat mogelijk is zodat het project niet buiten budget valt. Hosting en domeinregistratie zijn aparte jaarlijkse of maandelijkse kosten die we transparant communiceren.
                   </p>
                 </div>
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-xl">

@@ -49,10 +49,10 @@ export default function Navbar() {
               Portfolio
             </Link>
             <Link 
-              href="/prijzen" 
+              href="/kosten" 
               className="btn-nav"
             >
-              Prijzen
+              Kosten
             </Link>
             <Link 
               href="/contact" 
@@ -118,11 +118,11 @@ export default function Navbar() {
               Portfolio
             </Link>
             <Link 
-              href="/prijzen" 
+              href="/kosten" 
               className="btn-nav block w-full text-left"
               onClick={() => setIsOpen(false)}
             >
-              Prijzen
+              Kosten
             </Link>
             <Link 
               href="/contact" 

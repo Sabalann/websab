@@ -145,8 +145,8 @@ export default function Home() {
               <Link href="/portfolio" className="btn-primary btn-lg btn-shine">
                 Bekijk portfolio
               </Link>
-              <Link href="/prijzen" className="btn-secondary btn-lg">
-                Bekijk prijzen
+              <Link href="/kosten" className="btn-secondary btn-lg">
+                Bekijk kosten
               </Link>
             </div>
           </ScrollAnimation>
@@ -212,10 +212,10 @@ export default function Home() {
               <ScrollAnimation delay={400}>
                 <div className="flex gap-4 mt-8">
                   <Link 
-                    href="/prijzen" 
+                    href="/kosten" 
                     className="btn-primary btn-shine"
                   >
-                    Bekijk prijzen
+                    Bekijk kosten
                   </Link>
                   <Link 
                     href="/overmij" 
