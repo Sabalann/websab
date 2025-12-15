@@ -77,7 +77,7 @@ export default function OverMij() {
                 <div className="w-full sm:w-28 shrink-0 text-green-600 dark:text-green-400 font-semibold">Nu</div>
                 <div className="w-full">
                   <h3 className="font-semibold text-xl mb-2">Waar ik nu sta</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Als freelance webdeveloper richt ik me op het bouwen van op maat gemaakte websites die bedrijven helpen groeien. Ik combineer technische expertise met een scherp oog voor design en gebruikerservaring.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Als freelance developer bouw ik websites én apps. Ik help klanten met op maat gemaakte websites, en werk daarnaast aan eigen SaaS-producten en apps binnen het Apple-ecosysteem, zoals iOS- en macOS-apps. In al mijn projecten combineer ik technische kennis met oog voor design en gebruiksvriendelijkheid.</p>
                 </div>
               </div>
             </ScrollAnimation>
