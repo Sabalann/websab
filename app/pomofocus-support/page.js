@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar';
 import { ScrollAnimation } from '../components/ScrollAnimation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function PomoFocusSupport() {
@@ -46,6 +47,30 @@ export default function PomoFocusSupport() {
               <p className="text-xl text-gray-600 dark:text-gray-300">
                 A simple Pomodoro timer to help you stay focused and productive.
               </p>
+            </div>
+          </ScrollAnimation>
+
+          {/* Screenshots Gallery */}
+          <ScrollAnimation delay={50}>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center">App Screenshots</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <div 
+                    key={num}
+                    className="flex justify-center"
+                  >
+                    <div className="relative w-full max-w-[200px] aspect-[9/19.5] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-gray-100 dark:bg-gray-800">
+                      <Image
+                        src={`/projects/pomofocus/pomofocus-${num}.webp`}
+                        alt={`PomoFocus App Screenshot ${num}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </ScrollAnimation>
 
