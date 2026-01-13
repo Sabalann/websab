@@ -91,7 +91,7 @@ export default async function Project({ params: paramsPromise }) {
                       rel="noopener noreferrer"
                       className="btn-primary"
                     >
-                      Bekijk live website →
+                      Bekijk project →
                     </a>
                   )}
                 </div>
