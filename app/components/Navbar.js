@@ -5,12 +5,14 @@ import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../context/ThemeContext';
 
+const THEME_TOGGLE_ENABLED = false;
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
 
   return (
-    <nav className="fixed w-full bg-white dark:bg-gray-900 shadow-sm z-50 transition-colors duration-300">
+    <nav className="fixed w-full bg-white dark:bg-dark-elevated shadow-sm z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -61,17 +63,21 @@ export default function Navbar() {
               Contact
             </Link>
             
-            {/* Theme toggle button */}
-            <div className="ml-4">
-              <ThemeToggle />
-            </div>
+            {/* Theme toggle button (disabled when THEME_TOGGLE_ENABLED is false) */}
+            {THEME_TOGGLE_ENABLED && (
+              <div className="ml-4">
+                <ThemeToggle />
+              </div>
+            )}
           </div>
           
           <div className="-mr-2 flex items-center md:hidden">
             {/* Theme toggle for mobile */}
-            <div className="mr-4">
-              <ThemeToggle />
-            </div>
+            {THEME_TOGGLE_ENABLED && (
+              <div className="mr-4">
+                <ThemeToggle />
+              </div>
+            )}
             
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -95,7 +101,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="pt-2 pb-4 space-y-1 px-2 bg-white dark:bg-gray-900 shadow-lg">
+          <div className="pt-2 pb-4 space-y-1 px-2 bg-white dark:bg-dark-elevated shadow-lg">
             <Link 
               href="/" 
               className="btn-nav block w-full text-left"

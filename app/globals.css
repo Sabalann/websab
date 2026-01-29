@@ -1,5 +1,4 @@
-/* Custom Fonts - We could import a unique font here */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+/* Font loaded asynchronously in layout – no blocking @import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +16,7 @@
 
 @layer base {
   html {
-    font-family: 'Outfit', system-ui, sans-serif;
+    font-family: var(--font-satoshi), system-ui, sans-serif;
     scroll-behavior: smooth;
   }
 }
@@ -677,16 +676,12 @@
     @apply max-w-none;
   }
 
-  .prose p {
-    @apply mb-8;
-  }
-
   .prose h2 {
     @apply text-2xl font-bold mt-12 mb-6 text-gray-800 dark:text-gray-200;
   }
 
   .prose h3 {
-    @apply text-xl font-semibold mt-8 mb-4 text-gray-800 dark:text-gray-200;
+    @apply text-xl font-bold mt-8 mb-4 text-gray-800 dark:text-gray-200;
   }
 
   .prose ul {
@@ -694,11 +689,15 @@
   }
 
   .prose li {
-    @apply mb-2 text-gray-600 dark:text-gray-300;
+    @apply mb-2 font-medium text-gray-600 dark:text-gray-300;
+  }
+
+  .prose p {
+    @apply mb-8 font-medium;
   }
 
   .prose strong {
-    @apply font-semibold text-gray-800 dark:text-gray-200;
+    @apply font-bold text-gray-800 dark:text-gray-200;
   }
 
   .prose a {
@@ -725,5 +724,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-satoshi), system-ui, sans-serif;
+  font-weight: 400;
 }

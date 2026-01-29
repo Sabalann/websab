@@ -14,6 +14,9 @@ export default {
     screens,
     fontSize,
     extend: {
+      fontFamily: {
+        sans: ['var(--font-satoshi)', 'system-ui', 'sans-serif'],
+      },
       screens: {
         xs: '20rem'
       },

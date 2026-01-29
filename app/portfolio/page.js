@@ -27,7 +27,7 @@ export default async function Portfolio() {
             </h1>
           </ScrollAnimation>
           <ScrollAnimation delay={100}>
-            <p className="text-xl text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text text-center max-w-3xl mx-auto">
               Ontdek mijn recente projecten en zie hoe ik bedrijven help hun online doelen te bereiken.
             </p>
           </ScrollAnimation>
@@ -35,13 +35,13 @@ export default async function Portfolio() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ScrollAnimation key={project.id} delay={index * 100}>
                 <Link href={`/portfolio/${project.id}`} className="group block h-full">
-                  <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px] h-[32rem] flex flex-col">
+                  <div className="bg-white dark:bg-dark-elevated rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px] h-[32rem] flex flex-col">
                     <div className="relative aspect-video shrink-0">
                       {getImageSource(project.media) ? (
                         <>
@@ -62,23 +62,23 @@ export default async function Portfolio() {
                           )}
                         </>
                       ) : (
-                        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                          <span className="text-gray-400 dark:text-gray-600">No media available</span>
+                        <div className="absolute inset-0 bg-gray-100 dark:bg-dark-surface flex items-center justify-center">
+                          <span className="text-gray-400 dark:text-dark-muted">No media available</span>
                         </div>
                       )}
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="text-xl font-semibold mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                      <p className="text-gray-600 dark:text-dark-text mb-4 flex-grow">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-2 mt-auto">
                         {project.tags.map(tag => (
                           <span 
                             key={tag}
-                            className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm rounded-full text-gray-600 dark:text-gray-300"
+                            className="px-3 py-1 bg-gray-100 dark:bg-dark-surface text-sm rounded-full text-gray-600 dark:text-dark-text"
                           >
                             {tag}
                           </span>
@@ -103,7 +103,7 @@ export default async function Portfolio() {
           </ScrollAnimation>
           
           <ScrollAnimation delay={100}>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-xl text-gray-600 dark:text-dark-text">
               Laten we samen jouw ideeën omzetten in een prachtige website.
             </p>
           </ScrollAnimation>

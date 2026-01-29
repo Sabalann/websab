@@ -9,7 +9,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       className="flex items-center justify-center p-2 rounded-full transition-colors
-                bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+                bg-gray-200 hover:bg-gray-300 dark:bg-dark-surface dark:hover:bg-gray-600"
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
       {theme === "light" ? (

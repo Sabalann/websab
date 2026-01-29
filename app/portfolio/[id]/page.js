@@ -47,7 +47,7 @@ export default async function Project({ params: paramsPromise }) {
                   {project.tags && Array.isArray(project.tags) && project.tags.map(tag => (
                     <span 
                       key={tag}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm rounded-full text-gray-600 dark:text-gray-300"
+                      className="px-3 py-1 bg-gray-100 dark:bg-dark-surface text-sm rounded-full text-gray-600 dark:text-dark-text"
                     >
                       {tag}
                     </span>

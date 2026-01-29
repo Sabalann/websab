@@ -10,8 +10,8 @@ export default function ProjectMedia({ media }) {
   // Return early if no media is provided
   if (!media) {
     return (
-      <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800">
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-gray-600">
+      <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-gray-100 dark:bg-dark-surface">
+        <div className="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-dark-muted">
           No media available
         </div>
       </div>

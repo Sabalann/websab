@@ -135,7 +135,7 @@ export default function Home() {
           </ScrollAnimation>
           
           <ScrollAnimation className="mb-12 max-w-3xl mx-auto" delay={100}>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-dark-text">
               Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken.
             </p>
           </ScrollAnimation>
@@ -159,7 +159,7 @@ export default function Home() {
           <ScrollAnimation>
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 rounded-lg -z-10 float bg-green-100 dark:bg-green-900/30"></div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-lg -z-10 float-delayed"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gray-200 dark:bg-dark-surface rounded-lg -z-10 float-delayed"></div>
               <div className="relative aspect-square w-full max-w-md mx-auto">
                 <Image 
                   src="/profile.jpeg" 
@@ -183,27 +183,27 @@ export default function Home() {
             
             <div className="space-y-6">
               <ScrollAnimation delay={100}>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300 card-3d">
-                  <h3 className="text-xl font-semibold mb-2 text-green-600 dark:text-green-400">Persoonlijke aanpak</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                <div className="bg-white dark:bg-dark-elevated p-6 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300 card-3d">
+                  <h3 className="text-xl font-bold mb-2 text-green-600 dark:text-green-400">Persoonlijke aanpak</h3>
+                  <p className="text-gray-600 dark:text-dark-text">
                     Ik werk nauw samen met jou om precies te begrijpen wat jij, en belangrijker nog, jouw klanten nodig hebben. Geen standaard templates, maar een website die perfect past bij jouw bedrijf.
                   </p>
                 </div>
               </ScrollAnimation>
               
               <ScrollAnimation delay={200}>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300 card-3d">
-                  <h3 className="text-xl font-semibold mb-2 text-green-600 dark:text-green-400">Focus op resultaat</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                <div className="bg-white dark:bg-dark-elevated p-6 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300 card-3d">
+                  <h3 className="text-xl font-bold mb-2 text-green-600 dark:text-green-400">Focus op resultaat</h3>
+                  <p className="text-gray-600 dark:text-dark-text">
                     Je krijgt niet zomaar een mooie website, maar een effectief instrument dat klanten aantrekt.
                   </p>
                 </div>
               </ScrollAnimation>
               
               <ScrollAnimation delay={300}>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300 card-3d">
-                  <h3 className="text-xl font-semibold mb-2 text-green-600 dark:text-green-400">Technische expertise</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                <div className="bg-white dark:bg-dark-elevated p-6 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300 card-3d">
+                  <h3 className="text-xl font-bold mb-2 text-green-600 dark:text-green-400">Technische expertise</h3>
+                  <p className="text-gray-600 dark:text-dark-text">
                     Met jarenlange ervaring in webdevelopment zorg ik voor een snelle, veilige en gebruiksvriendelijke website die perfect werkt op alle apparaten.
                   </p>
                 </div>
@@ -240,7 +240,7 @@ export default function Home() {
           </ScrollAnimation>
           
           <ScrollAnimation delay={100}>
-            <p className="text-xl text-gray-700 dark:text-gray-200 mb-12">
+            <p className="text-xl text-gray-700 dark:text-dark-accent mb-12">
               Laten we samen jouw digitale visie werkelijkheid maken.
             </p>
           </ScrollAnimation>
