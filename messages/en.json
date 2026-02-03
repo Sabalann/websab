@@ -1,0 +1,273 @@
+{
+  "Metadata": {
+    "title": "Sab - Web Developer",
+    "description": "I build websites that appeal to both you and your customers."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "Home": {
+    "hero": {
+      "title": "Need a website?",
+      "subtitle": "I build websites that appeal to both you and your customers.",
+      "viewPortfolio": "View portfolio",
+      "viewPricing": "View pricing"
+    },
+    "about": {
+      "title": "Why choose me?",
+      "personalApproach": {
+        "title": "Personal Approach",
+        "description": "I work closely with you to understand exactly what you, and more importantly, your customers need. No standard templates, but a website that perfectly fits your business."
+      },
+      "focusResults": {
+        "title": "Focus on Results",
+        "description": "You won't just get a beautiful website, but an effective tool that attracts customers."
+      },
+      "technicalExpertise": {
+        "title": "Technical Expertise",
+        "description": "With years of experience in web development, I ensure a fast, secure, and user-friendly website that works perfectly on all devices."
+      },
+      "viewPricing": "View pricing",
+      "moreAbout": "More about me"
+    },
+    "cta": {
+      "title": "Ready for the next step?",
+      "subtitle": "Let's make your digital vision a reality together.",
+      "contact": "Get in touch"
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "Hey, I'm",
+      "name": "Sab",
+      "subtitle": "As a web developer, I help entrepreneurs take their online presence to the next level."
+    },
+    "journey": {
+      "title": "My Journey",
+      "2023": {
+        "year": "2023",
+        "title": "Bachelor Computer Science",
+        "description": "In 2023, I started my Bachelor's degree in Computer Science at Utrecht University. Here I developed a strong foundation in software development, UX design, and AI — knowledge I apply daily in my work as a web developer."
+      },
+      "2024": {
+        "year": "2024",
+        "title": "First Major Project",
+        "description": "In 2024, I started developing my own websites. I began with HTML, CSS, and JavaScript. Later, I experimented with many frameworks, after which I specialized in React. Currently, I work mainly with Next.js, React, and Tailwind CSS — tools with which I build fast and scalable websites."
+      },
+      "now": {
+        "year": "Now",
+        "title": "Where I Am Now",
+        "description": "As a freelance developer, I build both websites and apps. I help clients with custom-made websites, and also work on my own SaaS products and apps within the Apple ecosystem, such as iOS and macOS apps. In all my projects, I combine technical knowledge with an eye for design and user-friendliness."
+      }
+    },
+    "values": {
+      "title": "What I Believe In",
+      "quality": {
+        "title": "Quality Above All",
+        "description": "I believe in delivering high-quality websites that are not only beautiful but also function perfectly."
+      },
+      "attention": {
+        "title": "Personal Attention",
+        "description": "Every project gets my full attention. By working closely together and regularly checking in, I ensure that the end result perfectly matches my clients' wishes and needs."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "I believe in open communication and transparency. I give you a clear overview of the work I'm doing for you and constantly update you on your project's progress. We'll also always agree on costs in advance."
+      }
+    },
+    "cta": {
+      "title": "Ready to work together?",
+      "subtitle": "Let's build your ideal website together.",
+      "startProject": "Start your project",
+      "viewPricing": "View pricing"
+    }
+  },
+  "Portfolio": {
+    "hero": {
+      "title": "Portfolio",
+      "subtitle": "Discover my recent projects and see how I help businesses achieve their online goals."
+    },
+    "cta": {
+      "title": "Feeling inspired?",
+      "subtitle": "Let's turn your ideas into a beautiful website together.",
+      "contact": "Get in touch"
+    },
+    "noMedia": "No media available"
+  },
+  "Pricing": {
+    "hero": {
+      "title": "Transparent pricing for your website",
+      "subtitle": "Website costs are difficult to determine in advance, as unexpected problems or adjustments can always occur. However, once the project is clear, we can make an estimate that works for both of us. Below you'll find an overview of what you can expect."
+    },
+    "cards": {
+      "title": "Price Indications",
+      "landing": {
+        "title": "Landing Page",
+        "price": "€750 - €1,200",
+        "description": "Perfect for promoting a product, service, or event.",
+        "features": [
+          "1 conversion-focused page",
+          "Responsive design",
+          "Contact form",
+          "Basic SEO optimization"
+        ]
+      },
+      "business": {
+        "title": "Business Website",
+        "badge": "Popular",
+        "price": "€1,500 - €2,500",
+        "description": "A professional website for your business or portfolio.",
+        "features": [
+          "5-10 pages",
+          "Custom design",
+          "CMS for self-editing",
+          "Comprehensive SEO",
+          "Animations & interactions"
+        ]
+      },
+      "shop": {
+        "title": "E-commerce",
+        "price": "€2,500 - €5,000",
+        "description": "Sell online with a professional e-commerce solution.",
+        "features": [
+          "Product catalog",
+          "Shopping cart & checkout",
+          "Payment integration",
+          "Inventory management",
+          "Customer accounts"
+        ]
+      },
+      "disclaimer": "These are indicative prices. Exact costs depend on your specific requirements. Contact me for a non-binding custom quote."
+    },
+    "factors": {
+      "title": "What Determines the Price?",
+      "design": {
+        "title": "Design Complexity",
+        "description": "Custom designs, animations, and interactive elements require more development time. A unique design sets you apart from the competition."
+      },
+      "pages": {
+        "title": "Number of Pages",
+        "description": "More pages means more content to structure and optimize. Each page is carefully designed for the best user experience."
+      },
+      "features": {
+        "title": "Functionality",
+        "description": "Custom features like e-commerce or user accounts require additional development. These make your website more powerful and versatile."
+      },
+      "cms": {
+        "title": "Content Management",
+        "description": "A CMS makes it easy to manage content yourself. The initial setup ensures long-term ease of use."
+      }
+    },
+    "cta": "Schedule a free consultation",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "hiddenCosts": {
+        "question": "Are there hidden costs?",
+        "answer": "No, before I build your website, we discuss all costs. If certain modifications don't fit the budget anymore, we'll look together at what's possible to keep the project within budget. Hosting and domain registration are separate annual or monthly costs that we communicate transparently."
+      },
+      "maintenance": {
+        "question": "What about maintenance?",
+        "answer": "I offer optional maintenance contracts for updates, backups, and technical support. We'll discuss this after your website is delivered."
+      },
+      "expansion": {
+        "question": "Can I expand my website later?",
+        "answer": "Yes, I build your website to be easily expandable. We can always add new functionality as your business grows."
+      }
+    }
+  },
+  "Contact": {
+    "hero": {
+      "title": "Let's build something beautiful together",
+      "subtitle": "Ready to take your project to the next level? Fill out the form and I'll contact you within 24 hours."
+    },
+    "form": {
+      "title": "Start your project",
+      "name": {
+        "label": "Name",
+        "placeholder": "Your full name",
+        "required": "Name is required"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@email.com",
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "optional": "(optional)",
+        "placeholder": "+31 6 12345678"
+      },
+      "company": {
+        "label": "Company",
+        "optional": "(optional)",
+        "placeholder": "Your company name"
+      },
+      "website": {
+        "label": "Current Website",
+        "optional": "(optional)",
+        "placeholder": "https://yourwebsite.com"
+      },
+      "projectType": {
+        "label": "Project Type",
+        "placeholder": "Select an option",
+        "required": "Please select a project type",
+        "options": {
+          "new": "New website",
+          "redesign": "Website redesign",
+          "shop": "E-commerce",
+          "landing": "Landing page",
+          "app": "Web application",
+          "portfolio": "Portfolio website",
+          "other": "Other"
+        }
+      },
+      "budget": {
+        "label": "Budget",
+        "placeholder": "Select a range",
+        "required": "Please select a budget range",
+        "options": {
+          "low": "Less than €1,000",
+          "medium": "€1,000 - €2,500",
+          "high": "€2,500 - €5,000",
+          "veryHigh": "More than €5,000"
+        }
+      },
+      "message": {
+        "label": "Tell me about your project",
+        "placeholder": "Describe what kind of website you need, your expectations, and any specific requirements you have...",
+        "required": "Please tell me about your project",
+        "minLength": "Please describe your project in more detail (minimum 20 characters)"
+      },
+      "submit": "Send",
+      "submitting": "Sending...",
+      "success": {
+        "title": "Thank you for your message!",
+        "message": "I'll get back to you as soon as possible."
+      },
+      "error": {
+        "title": "Something went wrong",
+        "message": "Please try again or send an email directly to contact@sabvandenhout.nl"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "emailValue": "contact@sabvandenhout.nl",
+      "response": "Response Time",
+      "responseValue": "Within 24 hours",
+      "availability": "Availability",
+      "availabilityValue": "Mon - Fri, 9:00 AM - 6:00 PM"
+    }
+  },
+  "Common": {
+    "readMore": "Read more",
+    "viewProject": "View project",
+    "backToPortfolio": "Back to portfolio",
+    "loading": "Loading..."
+  }
+}

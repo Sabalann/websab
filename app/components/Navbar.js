@@ -2,27 +2,28 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ThemeToggle from './ThemeToggle';
-import { useTheme } from '../context/ThemeContext';
-
-const THEME_TOGGLE_ENABLED = false;
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
+  const t = useTranslations('Navigation');
+  const params = useParams();
+  const locale = params?.locale || 'en';
 
   return (
-    <nav className="fixed w-full bg-white dark:bg-dark-elevated shadow-sm z-50 transition-colors duration-300">
+    <nav className="fixed w-full bg-white shadow-sm z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link 
-                href="/" 
+                href={`/${locale}`}
                 className="relative w-12 h-12"
               >
                 <Image 
-                  src={theme === 'dark' ? '/logo-transparent-white.png' : '/logo-transparent-black.png'}
+                  src="/logo-transparent-black.png"
                   alt="Logo" 
                   fill
                   className="object-contain"
@@ -33,55 +34,43 @@ export default function Navbar() {
           
           <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
             <Link 
-              href="/" 
+              href={`/${locale}`}
               className="btn-nav"
             >
-              Home
+              {t('home')}
             </Link>
             <Link 
-              href="/overmij" 
+              href={`/${locale}/overmij`}
               className="btn-nav"
             >
-              Over mij
+              {t('about')}
             </Link>
             <Link 
-              href="/portfolio" 
+              href={`/${locale}/portfolio`}
               className="btn-nav"
             >
-              Portfolio
+              {t('portfolio')}
             </Link>
             <Link 
-              href="/kosten" 
+              href={`/${locale}/kosten`}
               className="btn-nav"
             >
-              Kosten
+              {t('pricing')}
             </Link>
             <Link 
-              href="/contact" 
+              href={`/${locale}/contact`}
               className="btn-contact ml-2"
             >
-              Contact
+              {t('contact')}
             </Link>
-            
-            {/* Theme toggle button (disabled when THEME_TOGGLE_ENABLED is false) */}
-            {THEME_TOGGLE_ENABLED && (
-              <div className="ml-4">
-                <ThemeToggle />
-              </div>
-            )}
+            <LanguageSwitcher />
           </div>
           
-          <div className="-mr-2 flex items-center md:hidden">
-            {/* Theme toggle for mobile */}
-            {THEME_TOGGLE_ENABLED && (
-              <div className="mr-4">
-                <ThemeToggle />
-              </div>
-            )}
-            
+          <div className="-mr-2 flex items-center md:hidden gap-2">
+            <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
             >
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
@@ -101,45 +90,45 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="pt-2 pb-4 space-y-1 px-2 bg-white dark:bg-dark-elevated shadow-lg">
+          <div className="pt-2 pb-4 space-y-1 px-2 bg-white shadow-lg">
             <Link 
-              href="/" 
+              href={`/${locale}`}
               className="btn-nav block w-full text-left"
               onClick={() => setIsOpen(false)}
             >
-              Home
+              {t('home')}
             </Link>
             <Link 
-              href="/overmij" 
+              href={`/${locale}/overmij`}
               className="btn-nav block w-full text-left"
               onClick={() => setIsOpen(false)}
             >
-              Over mij
+              {t('about')}
             </Link>
             <Link 
-              href="/portfolio" 
+              href={`/${locale}/portfolio`}
               className="btn-nav block w-full text-left"
               onClick={() => setIsOpen(false)}
             >
-              Portfolio
+              {t('portfolio')}
             </Link>
             <Link 
-              href="/kosten" 
+              href={`/${locale}/kosten`}
               className="btn-nav block w-full text-left"
               onClick={() => setIsOpen(false)}
             >
-              Kosten
+              {t('pricing')}
             </Link>
             <Link 
-              href="/contact" 
+              href={`/${locale}/contact`}
               className="btn-contact block w-full text-center mt-2"
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              {t('contact')}
             </Link>
           </div>
         </div>
       )}
     </nav>
   );
-} 
+}

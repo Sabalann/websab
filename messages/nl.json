@@ -1,0 +1,273 @@
+{
+  "Metadata": {
+    "title": "Sab - Webdeveloper",
+    "description": "Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "Over mij",
+    "portfolio": "Portfolio",
+    "pricing": "Kosten",
+    "contact": "Contact"
+  },
+  "Home": {
+    "hero": {
+      "title": "Heb je een website nodig?",
+      "subtitle": "Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken.",
+      "viewPortfolio": "Bekijk portfolio",
+      "viewPricing": "Bekijk kosten"
+    },
+    "about": {
+      "title": "Waarom voor mij kiezen?",
+      "personalApproach": {
+        "title": "Persoonlijke aanpak",
+        "description": "Ik werk nauw samen met jou om precies te begrijpen wat jij, en belangrijker nog, jouw klanten nodig hebben. Geen standaard templates, maar een website die perfect past bij jouw bedrijf."
+      },
+      "focusResults": {
+        "title": "Focus op resultaat",
+        "description": "Je krijgt niet zomaar een mooie website, maar een effectief instrument dat klanten aantrekt."
+      },
+      "technicalExpertise": {
+        "title": "Technische expertise",
+        "description": "Met jarenlange ervaring in webdevelopment zorg ik voor een snelle, veilige en gebruiksvriendelijke website die perfect werkt op alle apparaten."
+      },
+      "viewPricing": "Bekijk kosten",
+      "moreAbout": "Meer over mij"
+    },
+    "cta": {
+      "title": "Klaar voor de volgende stap?",
+      "subtitle": "Laten we samen jouw digitale visie werkelijkheid maken.",
+      "contact": "Neem contact op"
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "Hey, ik ben",
+      "name": "Sab",
+      "subtitle": "Als web developer help ik ondernemers hun online aanwezigheid naar het volgende niveau te tillen."
+    },
+    "journey": {
+      "title": "Mijn Reis",
+      "2023": {
+        "year": "2023",
+        "title": "Bachelor Computer Science",
+        "description": "In 2023 begon ik aan mijn bachelor Computer Science aan de Universiteit Utrecht. Hier ontwikkelde ik een sterke basis in software development, UX-design en AI — kennis die ik dagelijks toepas in mijn werk als webdeveloper."
+      },
+      "2024": {
+        "year": "2024",
+        "title": "Eerste Grote Project",
+        "description": "In 2024 ben ik begonnen met het ontwikkelen van mijn eigen websites. Ik ben begonnen met HTML, CSS en JavaScript. Later heb ik geëxperimenteerd met veel frameworks, waarna ik mezelf specialiseerde in React. Momenteel werk ik vooral met Next.js, React en Tailwind CSS — tools waarmee ik snelle en schaalbare websites bouw."
+      },
+      "now": {
+        "year": "Nu",
+        "title": "Waar ik nu sta",
+        "description": "Als freelance developer bouw ik websites én apps. Ik help klanten met op maat gemaakte websites, en werk daarnaast aan eigen SaaS-producten en apps binnen het Apple-ecosysteem, zoals iOS- en macOS-apps. In al mijn projecten combineer ik technische kennis met oog voor design en gebruiksvriendelijkheid."
+      }
+    },
+    "values": {
+      "title": "Waar ik in geloof",
+      "quality": {
+        "title": "Kwaliteit Boven Alles",
+        "description": "Ik geloof in het leveren van hoogwaardige websites die niet alleen mooi zijn, maar ook perfect functioneren."
+      },
+      "attention": {
+        "title": "Persoonlijke Aandacht",
+        "description": "Elk project krijgt mijn volledige aandacht. Door nauw samen te werken en regelmatig af te stemmen, zorg ik ervoor dat het eindresultaat perfect aansluit bij de wensen en behoeften van mijn klanten."
+      },
+      "transparency": {
+        "title": "Transparantie",
+        "description": "Ik geloof in open communicatie en transparantie. Ik geef je een helder overzicht van het werk dat ik voor je uitvoer en ik geef je constant updates over het progressie van je project. Ook zullen we altijd de kosten van te voren afspreken."
+      }
+    },
+    "cta": {
+      "title": "Klaar om samen te werken?",
+      "subtitle": "Laten we samen jouw ideale website bouwen.",
+      "startProject": "Start jouw project",
+      "viewPricing": "Bekijk prijzen"
+    }
+  },
+  "Portfolio": {
+    "hero": {
+      "title": "Portfolio",
+      "subtitle": "Ontdek mijn recente projecten en zie hoe ik bedrijven help hun online doelen te bereiken."
+    },
+    "cta": {
+      "title": "Ben je geïnspireerd geraakt?",
+      "subtitle": "Laten we samen jouw ideeën omzetten in een prachtige website.",
+      "contact": "Neem contact op"
+    },
+    "noMedia": "Geen media beschikbaar"
+  },
+  "Pricing": {
+    "hero": {
+      "title": "Transparante prijzen voor jouw website",
+      "subtitle": "De kosten van een website zijn moeilijk van te voren te bepalen, er kunnen altijd problemen of aanpassingen optreden die je niet van te voren verwacht. Wel kunnen we, nadat het project duidelijk is, een schatting maken waar we allebei vanuit kunnen gaan. Hieronder vind je een overzicht van wat je kunt verwachten."
+    },
+    "cards": {
+      "title": "Prijsindicaties",
+      "landing": {
+        "title": "Landingspagina",
+        "price": "€750 - €1.200",
+        "description": "Perfect voor het promoten van een product, dienst of evenement.",
+        "features": [
+          "1 pagina met focus op conversie",
+          "Responsive design",
+          "Contactformulier",
+          "Basis SEO optimalisatie"
+        ]
+      },
+      "business": {
+        "title": "Bedrijfswebsite",
+        "badge": "Populair",
+        "price": "€1.500 - €2.500",
+        "description": "Een professionele website voor jouw bedrijf of portfolio.",
+        "features": [
+          "5-10 pagina's",
+          "Custom design",
+          "CMS voor zelf aanpassen",
+          "Uitgebreide SEO",
+          "Animaties & interacties"
+        ]
+      },
+      "shop": {
+        "title": "Webshop",
+        "price": "€2.500 - €5.000",
+        "description": "Online verkopen met een professionele e-commerce oplossing.",
+        "features": [
+          "Productcatalogus",
+          "Winkelwagen & checkout",
+          "Payment integratie",
+          "Voorraadbeheer",
+          "Klantaccounts"
+        ]
+      },
+      "disclaimer": "Dit zijn indicatieve prijzen. De exacte kosten hangen af van jouw specifieke wensen en eisen. Neem contact op voor een vrijblijvende offerte op maat."
+    },
+    "factors": {
+      "title": "Wat bepaalt de prijs?",
+      "design": {
+        "title": "Design Complexiteit",
+        "description": "Custom designs, animaties en interactieve elementen vragen meer ontwikkeltijd. Een uniek design onderscheidt je van de concurrentie."
+      },
+      "pages": {
+        "title": "Aantal Pagina's",
+        "description": "Meer pagina's betekent meer content structureren en optimaliseren. Elke pagina wordt zorgvuldig ontworpen voor de beste gebruikerservaring."
+      },
+      "features": {
+        "title": "Functionaliteiten",
+        "description": "Custom features zoals e-commerce of gebruikers accounts vereisen extra ontwikkeling. Deze maken je website krachtiger en veelzijdiger."
+      },
+      "cms": {
+        "title": "Content Management",
+        "description": "Een CMS systeem maakt het makkelijk om zelf content te beheren. De initiële setup zorgt voor langdurig gebruiksgemak."
+      }
+    },
+    "cta": "Plan een vrijblijvend gesprek",
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "hiddenCosts": {
+        "question": "Zijn er verborgen kosten?",
+        "answer": "Nee, voordat ik jouw website bouw, bespreken we alle kosten. Als bepaalde aanpassingen niet meer in het budget passen, zullen we samen kijken wat mogelijk is zodat het project niet buiten budget valt. Hosting en domeinregistratie zijn aparte jaarlijkse of maandelijkse kosten die we transparant communiceren."
+      },
+      "maintenance": {
+        "question": "Hoe zit het met onderhoud?",
+        "answer": "Ik bied optionele onderhoudscontracten aan voor updates, backups en technische ondersteuning. Dit bespreken we na oplevering van je website."
+      },
+      "expansion": {
+        "question": "Kan ik mijn website later uitbreiden?",
+        "answer": "Ja, ik bouw je website zo dat deze makkelijk uit te breiden is. We kunnen altijd nieuwe functionaliteiten toevoegen wanneer je bedrijf groeit."
+      }
+    }
+  },
+  "Contact": {
+    "hero": {
+      "title": "Laten we samen iets moois bouwen",
+      "subtitle": "Klaar om jouw project naar het volgende niveau te tillen? Vul het formulier in en ik neem binnen 24 uur contact met je op."
+    },
+    "form": {
+      "title": "Start jouw project",
+      "name": {
+        "label": "Naam",
+        "placeholder": "Je volledige naam",
+        "required": "Naam is verplicht"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "je@email.com",
+        "required": "Email is verplicht",
+        "invalid": "Voer een geldig emailadres in"
+      },
+      "phone": {
+        "label": "Telefoonnummer",
+        "optional": "(optioneel)",
+        "placeholder": "06 12345678"
+      },
+      "company": {
+        "label": "Bedrijf",
+        "optional": "(optioneel)",
+        "placeholder": "Je bedrijfsnaam"
+      },
+      "website": {
+        "label": "Huidige website",
+        "optional": "(optioneel)",
+        "placeholder": "https://jewebsite.nl"
+      },
+      "projectType": {
+        "label": "Type project",
+        "placeholder": "Selecteer een optie",
+        "required": "Selecteer een projecttype",
+        "options": {
+          "new": "Nieuwe website",
+          "redesign": "Website redesign",
+          "shop": "Webshop",
+          "landing": "Landingspagina",
+          "app": "Web applicatie",
+          "portfolio": "Portfolio website",
+          "other": "Anders"
+        }
+      },
+      "budget": {
+        "label": "Budget",
+        "placeholder": "Selecteer een range",
+        "required": "Selecteer een budget range",
+        "options": {
+          "low": "Minder dan €1.000",
+          "medium": "€1.000 - €2.500",
+          "high": "€2.500 - €5.000",
+          "veryHigh": "Meer dan €5.000"
+        }
+      },
+      "message": {
+        "label": "Vertel over je project",
+        "placeholder": "Beschrijf wat voor website je nodig hebt, wat je verwachtingen zijn, en eventuele specifieke wensen die je hebt...",
+        "required": "Vertel iets over je project",
+        "minLength": "Beschrijf je project iets uitgebreider (minimaal 20 karakters)"
+      },
+      "submit": "Verstuur",
+      "submitting": "Versturen...",
+      "success": {
+        "title": "Bedankt voor je bericht!",
+        "message": "Ik neem zo snel mogelijk contact met je op."
+      },
+      "error": {
+        "title": "Er is iets misgegaan",
+        "message": "Probeer het opnieuw of stuur direct een email naar contact@sabvandenhout.nl"
+      }
+    },
+    "info": {
+      "title": "Contact informatie",
+      "email": "Email",
+      "emailValue": "contact@sabvandenhout.nl",
+      "response": "Reactietijd",
+      "responseValue": "Binnen 24 uur",
+      "availability": "Beschikbaarheid",
+      "availabilityValue": "Ma - Vr, 9:00 - 18:00"
+    }
+  },
+  "Common": {
+    "readMore": "Lees meer",
+    "viewProject": "Bekijk project",
+    "backToPortfolio": "Terug naar portfolio",
+    "loading": "Laden..."
+  }
+}

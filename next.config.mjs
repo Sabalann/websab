@@ -1,3 +1,7 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n.js');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'standalone', // You can keep or remove this line based on your deployment needs
@@ -18,4 +22,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

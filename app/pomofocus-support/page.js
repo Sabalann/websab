@@ -44,7 +44,7 @@ export default function PomoFocusSupport() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 PomoFocus Support
               </h1>
-              <p className="text-xl text-gray-600 dark:text-dark-text">
+              <p className="text-xl text-gray-600">
                 A simple Pomodoro timer to help you stay focused and productive.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function PomoFocusSupport() {
                     key={num}
                     className="flex justify-center"
                   >
-                    <div className="relative w-full max-w-[200px] aspect-[9/19.5] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-gray-100 dark:bg-dark-surface">
+                    <div className="relative w-full max-w-[200px] aspect-[9/19.5] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-gray-100">
                       <Image
                         src={`/projects/pomofocus/pomofocus-${num}.webp`}
                         alt={`PomoFocus App Screenshot ${num}`}
@@ -76,14 +76,14 @@ export default function PomoFocusSupport() {
 
           {/* Contact Form */}
           <ScrollAnimation delay={100}>
-            <div className="bg-white dark:bg-dark-elevated p-8 rounded-xl shadow-sm mb-16">
+            <div className="bg-white p-8 rounded-xl shadow-sm mb-16">
               <h2 className="text-3xl font-bold mb-6">Contact Support</h2>
-              <p className="text-gray-600 dark:text-dark-text mb-6">
+              <p className="text-gray-600 mb-6">
                 Have a question or need help? Fill out the form below and we'll get back to you within 24 hours.
               </p>
               
               {formStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
+                <div className="mb-6 p-4 bg-green-100 text-green-800 rounded-lg">
                   Thank you for your message! We'll get back to you soon at {formData.email || 'your email'}.
                 </div>
               )}
@@ -100,7 +100,7 @@ export default function PomoFocusSupport() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-dark-surface bg-white dark:bg-dark-surface focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
                 
@@ -115,7 +115,7 @@ export default function PomoFocusSupport() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-dark-surface bg-white dark:bg-dark-surface focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
                 
@@ -130,7 +130,7 @@ export default function PomoFocusSupport() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-dark-surface bg-white dark:bg-dark-surface focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
                 
@@ -145,7 +145,7 @@ export default function PomoFocusSupport() {
                     onChange={handleChange}
                     required
                     rows="6"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-dark-surface bg-white dark:bg-dark-surface focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                   />
                 </div>
                 
@@ -157,21 +157,21 @@ export default function PomoFocusSupport() {
                 </button>
               </form>
               
-              <p className="mt-6 text-sm text-gray-600 dark:text-dark-muted">
-                You can also reach us directly at: <a href="mailto:s.alaeiyeh@gmail.com" className="text-green-600 dark:text-green-400 hover:underline">s.alaeiyeh@gmail.com</a>
+              <p className="mt-6 text-sm text-gray-600">
+                You can also reach us directly at: <a href="mailto:s.alaeiyeh@gmail.com" className="text-green-600 hover:underline">s.alaeiyeh@gmail.com</a>
               </p>
             </div>
           </ScrollAnimation>
 
           {/* How to Use Section */}
           <ScrollAnimation delay={200}>
-            <div className="bg-white dark:bg-dark-elevated p-8 rounded-xl shadow-sm mb-16">
+            <div className="bg-white p-8 rounded-xl shadow-sm mb-16">
               <h2 className="text-3xl font-bold mb-6">How to Use PomoFocus</h2>
               
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-bold mb-3">Creating Custom Timers</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     Navigate to the timers section and tap the "+" button to create a new Pomodoro timer. 
                     Set your preferred focus duration, short break, and long break lengths.
                   </p>
@@ -179,7 +179,7 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-3">Starting, Pausing & Resetting Sessions</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     Tap the play button to start your focus session. You can pause at any time by tapping 
                     the pause button. To reset a session, use the reset button to return to the beginning 
                     of the current phase. You can also skip to the next phase (break or focus) using the 
@@ -189,7 +189,7 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-3">Viewing Your Statistics</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     Access your stats from the main screen. Here you'll find your daily focus minutes, 
                     total hours focused, completed sessions, current streak, and a 90-day heatmap showing 
                     your activity patterns. Your stats help you track your productivity journey over time.
@@ -201,13 +201,13 @@ export default function PomoFocusSupport() {
 
           {/* FAQ Section */}
           <ScrollAnimation delay={300}>
-            <div className="bg-white dark:bg-dark-elevated p-8 rounded-xl shadow-sm mb-16">
+            <div className="bg-white p-8 rounded-xl shadow-sm mb-16">
               <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
               
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-bold mb-2">Where are my stats?</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     Your statistics are displayed on the 'Profile' tab. You'll see stats like 
                     today's focus minutes, total hours, your best streak, and a 
                     90-day activity heatmap.
@@ -216,7 +216,7 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-2">How do I reset a session?</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     While a timer is running or paused, tap the reset button (circular arrow icon) to 
                     restart the current phase from the beginning.
                   </p>
@@ -224,7 +224,7 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-2">How do I customize my timer?</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     Go to the timers section and either create a new timer or edit an existing one. You can 
                     customize the focus duration, short break length and long break length.
                   </p>
@@ -232,7 +232,7 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-2">Does it work in the background?</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     Yes! PomoFocus continues tracking your time even when the app is in the background. 
                     You'll receive notifications when it's time to take a break or start a new focus session. 
                     Make sure notifications are enabled for the best experience.
@@ -241,7 +241,7 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-2">How do streaks work?</h3>
-                  <p className="text-gray-600 dark:text-dark-text">
+                  <p className="text-gray-600">
                     Your streak increases by one each day you focus for at least 30 minutes. If you 
                     miss a day, your streak resets to zero. Streaks help you build consistency and maintain 
                     a regular focus habit.
@@ -253,16 +253,16 @@ export default function PomoFocusSupport() {
 
           {/* Troubleshooting Section */}
           <ScrollAnimation delay={400}>
-            <div className="bg-white dark:bg-dark-elevated p-8 rounded-xl shadow-sm mb-16">
+            <div className="bg-white p-8 rounded-xl shadow-sm mb-16">
               <h2 className="text-3xl font-bold mb-6">Troubleshooting</h2>
               
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-bold mb-2">Notifications not working</h3>
-                  <p className="text-gray-600 dark:text-dark-text mb-2">
+                  <p className="text-gray-600 mb-2">
                     If you're not receiving notifications:
                   </p>
-                  <ul className="list-disc list-inside text-gray-600 dark:text-dark-text space-y-1 ml-4">
+                  <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4">
                     <li>Check that notifications are enabled in your device Settings → PomoFocus</li>
                     <li>Make sure "Do Not Disturb" mode is not blocking app notifications</li>
                     <li>Try restarting the app</li>
@@ -272,10 +272,10 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-2">App not tracking progress</h3>
-                  <p className="text-gray-600 dark:text-dark-text mb-2">
+                  <p className="text-gray-600 mb-2">
                     If your progress isn't being saved:
                   </p>
-                  <ul className="list-disc list-inside text-gray-600 dark:text-dark-text space-y-1 ml-4">
+                  <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4">
                     <li>Make sure you're completing full focus sessions (not just starting them)</li>
                     <li>Check your device storage - the app needs space to save data</li>
                     <li>Try force-closing and reopening the app</li>
@@ -285,10 +285,10 @@ export default function PomoFocusSupport() {
                 
                 <div>
                   <h3 className="text-xl font-bold mb-2">Timer stopping in background</h3>
-                  <p className="text-gray-600 dark:text-dark-text mb-2">
+                  <p className="text-gray-600 mb-2">
                     If your timer stops when the app is in the background:
                   </p>
-                  <ul className="list-disc list-inside text-gray-600 dark:text-dark-text space-y-1 ml-4">
+                  <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4">
                     <li>Check your device's battery optimization settings and disable optimization for PomoFocus</li>
                     <li>On iOS, ensure Background App Refresh is enabled for PomoFocus</li>
                     <li>Make sure the app isn't being force-closed by system memory management</li>
@@ -301,9 +301,9 @@ export default function PomoFocusSupport() {
 
           {/* Privacy Policy Link */}
           <ScrollAnimation delay={500}>
-            <div className="bg-white dark:bg-dark-elevated p-8 rounded-xl shadow-sm text-center">
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
               <h2 className="text-2xl font-bold mb-4">Privacy & Data</h2>
-              <p className="text-gray-600 dark:text-dark-text mb-6">
+              <p className="text-gray-600 mb-6">
                 We take your privacy seriously. Learn more about how we handle your data.
               </p>
               <Link 
@@ -320,7 +320,7 @@ export default function PomoFocusSupport() {
             <div className="mt-12 text-center">
               <Link 
                 href="/portfolio/pomofocus"
-                className="text-green-600 dark:text-green-400 hover:underline"
+                className="text-green-600 hover:underline"
               >
                 ← Back to PomoFocus Project
               </Link>

@@ -429,14 +429,14 @@
 
   /* Selection styling */
   ::selection {
-    @apply bg-opacity-30 text-gray-900 dark:text-white;
+    @apply bg-opacity-30 text-gray-900;
     background-color: var(--color-primary);
   }
 
   /* Navigation buttons */
   .btn-nav {
     @apply px-3 py-2 rounded-md text-sm font-medium transition-all duration-200
-    dark:text-gray-300 hover:text-gray-800 dark:hover:text-white;
+    hover:text-gray-800;
     color: var(--color-primaryDark);
     position: relative;
     overflow: hidden;
@@ -490,7 +490,7 @@
   /* Secondary buttons */
   .btn-secondary {
     @apply inline-flex items-center justify-center px-6 py-3 bg-white text-gray-800 font-medium rounded-md shadow-sm border transition-all duration-300
-    dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white hover:translate-y-[-2px] hover:shadow-md active:translate-y-[0px];
+    hover:translate-y-[-2px] hover:shadow-md active:translate-y-[0px];
     border-color: var(--color-primary);
     color: var(--color-primaryDark);
     position: relative;
@@ -519,10 +519,6 @@
   .btn-secondary:hover {
     color: white;
     border-color: transparent;
-  }
-  
-  .dark .btn-secondary:hover {
-    color: white;
   }
 
   /* Large button variant */
@@ -596,10 +592,6 @@
   .bg-neutral {
     background-color: var(--color-neutral);
   }
-  
-  .dark .bg-neutral {
-    background-color: var(--color-neutralDark);
-  }
 
   /* Text colors */
   .text-primary {
@@ -608,10 +600,6 @@
   
   .text-primary-dark {
     color: var(--color-primaryDark);
-  }
-  
-  .dark .text-primary {
-    color: var(--color-primary);
   }
 
   /* Scroll-triggered animation */
@@ -677,11 +665,11 @@
   }
 
   .prose h2 {
-    @apply text-2xl font-bold mt-12 mb-6 text-gray-800 dark:text-gray-200;
+    @apply text-2xl font-bold mt-12 mb-6 text-gray-800;
   }
 
   .prose h3 {
-    @apply text-xl font-bold mt-8 mb-4 text-gray-800 dark:text-gray-200;
+    @apply text-xl font-bold mt-8 mb-4 text-gray-800;
   }
 
   .prose ul {
@@ -689,7 +677,7 @@
   }
 
   .prose li {
-    @apply mb-2 font-medium text-gray-600 dark:text-gray-300;
+    @apply mb-2 font-medium text-gray-600;
   }
 
   .prose p {
@@ -697,7 +685,7 @@
   }
 
   .prose strong {
-    @apply font-bold text-gray-800 dark:text-gray-200;
+    @apply font-bold text-gray-800;
   }
 
   .prose a {
@@ -712,13 +700,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #fff;
-    --foreground: #000;
-  }
 }
 
 body {

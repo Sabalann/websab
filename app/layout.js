@@ -1,7 +1,11 @@
 import localFont from 'next/font/local';
 import './globals.css';
-import { ThemeProvider } from './context/ThemeContext';
 import { Analytics } from "@vercel/analytics/next";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { locales } from '../i18n';
+import { ConvexClientProvider } from './ConvexClientProvider';
 
 const satoshi = localFont({
   src: [
@@ -15,19 +19,26 @@ const satoshi = localFont({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'Sab - Webdeveloper',
-  description: 'Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken.',
-};
-
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+  const { locale } = await params || { locale: 'en' };
+  
+  // Validate locale
+  if (params?.locale && !locales.includes(params.locale)) {
+    notFound();
+  }
+  
+  // Providing all messages to the client side is the easiest way
+  const messages = await getMessages();
+  
   return (
-    <html lang="nl" className={`scroll-smooth ${satoshi.variable}`}>
-      <body className={`${satoshi.className} bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300`}>
-        <ThemeProvider>
-          <Analytics />
-          {children}
-        </ThemeProvider>
+    <html lang={locale} className={`scroll-smooth ${satoshi.variable}`} suppressHydrationWarning>
+      <body className={`${satoshi.className} bg-white text-black transition-colors duration-300`}>
+        <ConvexClientProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Analytics />
+            {children}
+          </NextIntlClientProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   );
