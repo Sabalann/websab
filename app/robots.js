@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = 'https://sabvandenhout.nl';
+  const baseUrl = 'https://websab.nl';
   
   return {
     rules: {

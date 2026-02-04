@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   }
 
   const t = await getTranslations({ locale, namespace: 'Metadata' });
-  const baseUrl = 'https://sabvandenhout.nl'; // Update with your actual domain
+  const baseUrl = 'https://websab.nl';
   
   return {
     title: t('title'),

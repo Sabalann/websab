@@ -251,17 +251,19 @@
       },
       "error": {
         "title": "Er is iets misgegaan",
-        "message": "Probeer het opnieuw of stuur direct een email naar contact@sabvandenhout.nl"
+        "message": "Probeer het opnieuw of stuur direct een email naar s.alaeiyeh@gmail.com"
       }
     },
     "info": {
       "title": "Contact informatie",
       "email": "Email",
-      "emailValue": "contact@sabvandenhout.nl",
-      "response": "Reactietijd",
-      "responseValue": "Binnen 24 uur",
-      "availability": "Beschikbaarheid",
-      "availabilityValue": "Ma - Vr, 9:00 - 18:00"
+      "emailValue": "s.alaeiyeh@gmail.com",
+      "linkedin": "LinkedIn",
+      "linkedinLabel": "Bekijk mijn LinkedIn",
+      "linkedinUrl": "https://www.linkedin.com/in/sabalan-alaeiyeh/",
+      "github": "GitHub",
+      "githubLabel": "Bekijk mijn GitHub",
+      "githubUrl": "https://github.com/Sabalann"
     }
   },
   "Common": {

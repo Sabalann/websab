@@ -1,7 +1,7 @@
 import { getAllProjects } from './lib/projects';
 
 export default async function sitemap() {
-  const baseUrl = 'https://sabvandenhout.nl'; // Update with your actual domain
+  const baseUrl = 'https://websab.nl';
   const locales = ['nl', 'en'];
   const currentDate = new Date();
 
