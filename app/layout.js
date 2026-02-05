@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '../i18n';
 import { ConvexClientProvider } from './ConvexClientProvider';
+import StructuredData from './components/StructuredData';
 
 const satoshi = localFont({
   src: [
@@ -32,6 +33,9 @@ export default async function RootLayout({ children, params }) {
   
   return (
     <html lang={locale} className={`scroll-smooth ${satoshi.variable}`} suppressHydrationWarning>
+      <head>
+        <StructuredData locale={locale} />
+      </head>
       <body className={`${satoshi.className} bg-white text-black transition-colors duration-300`}>
         <ConvexClientProvider>
           <NextIntlClientProvider messages={messages}>
