@@ -74,7 +74,7 @@ export default async function Project({ params: paramsPromise }) {
                   {/* Support button for PomoFocus */}
                   {id === 'pomofocus' && (
                     <Link 
-                      href="/pomofocus-support"
+                      href={`/${locale}/pomofocus-support`}
                       className="px-4 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded-full transition-colors font-medium"
                     >
                       App Support

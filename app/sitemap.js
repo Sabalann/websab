@@ -111,20 +111,20 @@ export default async function sitemap() {
 
   // ===== LEGAL/SUPPORT PAGES =====
   // Priority 0.3 - Low SEO value, rarely change
-  const supportPages = [
+  const supportPages = locales.flatMap(locale => [
     {
-      url: `${baseUrl}/pomofocus-support`,
+      url: `${baseUrl}/${locale}/pomofocus-support`,
       lastModified: new Date('2025-01-15'),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/pomofocus-privacy`,
+      url: `${baseUrl}/${locale}/pomofocus-privacy`,
       lastModified: new Date('2025-01-15'),
       changeFrequency: 'yearly',
       priority: 0.3,
     }
-  ];
+  ]);
 
   // Return all entries grouped logically (helps with readability and debugging)
   return [
