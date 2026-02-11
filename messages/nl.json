@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Sab - Webdeveloper",
-    "description": "Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken."
+    "title": "Website Apeldoorn | Betaalbare Websites voor Ondernemers | Sab",
+    "description": "Freelance webdeveloper in Apeldoorn. Betaalbare websites voor restaurants, kappers, coaches. Vanaf €500. Neem contact op."
   },
   "Navigation": {
     "home": "Home",
@@ -12,8 +12,8 @@
   },
   "Home": {
     "hero": {
-      "title": "Heb je een website nodig?",
-      "subtitle": "Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken.",
+      "title": "Website nodig voor je bedrijf?",
+      "subtitle": "Ik bouw betaalbare, professionele websites voor ondernemers in Apeldoorn en omgeving.",
       "viewPortfolio": "Bekijk portfolio",
       "viewPricing": "Bekijk kosten"
     },
@@ -21,7 +21,7 @@
       "title": "Waarom voor mij kiezen?",
       "personalApproach": {
         "title": "Persoonlijke aanpak",
-        "description": "Ik werk nauw samen met jou om precies te begrijpen wat jij, en belangrijker nog, jouw klanten nodig hebben. Geen standaard templates, maar een website die perfect past bij jouw bedrijf."
+        "description": "Ik werk nauw samen met lokale ondernemers om precies te begrijpen wat jij en jouw klanten nodig hebben. Geen standaard templates, maar een betaalbare website die perfect past bij jouw bedrijf."
       },
       "focusResults": {
         "title": "Focus op resultaat",
@@ -44,7 +44,7 @@
     "hero": {
       "title": "Hey, ik ben",
       "name": "Sab",
-      "subtitle": "Als web developer help ik ondernemers hun online aanwezigheid naar het volgende niveau te tillen."
+      "subtitle": "Als web developer help ik ondernemers in Apeldoorn en de Veluwe hun online aanwezigheid naar het volgende niveau te tillen."
     },
     "journey": {
       "title": "Mijn Reis",
@@ -100,14 +100,14 @@
   },
   "Pricing": {
     "hero": {
-      "title": "Transparante prijzen voor jouw website",
-      "subtitle": "De kosten van een website zijn moeilijk van te voren te bepalen, er kunnen altijd problemen of aanpassingen optreden die je niet van te voren verwacht. Wel kunnen we, nadat het project duidelijk is, een schatting maken waar we allebei vanuit kunnen gaan. Hieronder vind je een overzicht van wat je kunt verwachten."
+      "title": "Betaalbare websites voor ondernemers in Apeldoorn",
+      "subtitle": "Transparante prijzen, geen verborgen kosten. Vanaf €500. Nadat het project duidelijk is, maken we een schatting waar we allebei vanuit kunnen gaan. Hieronder vind je een overzicht."
     },
     "cards": {
       "title": "Prijsindicaties",
       "landing": {
         "title": "Landingspagina",
-        "price": "€750 - €1.200",
+        "price": "€500 - €700",
         "description": "Perfect voor het promoten van een product, dienst of evenement.",
         "features": [
           "3 pagina's met focus op conversie",
@@ -119,19 +119,22 @@
       "business": {
         "title": "Bedrijfswebsite",
         "badge": "Populair",
-        "price": "€1.500 - €2.500",
+        "price": "€700 - €1.200",
         "description": "Een professionele website voor jouw bedrijf of portfolio.",
         "features": [
-          "5-10 pagina's",
-          "Custom design",
-          "CMS voor zelf aanpassen",
-          "Uitgebreide SEO",
-          "Animaties & interacties"
+          "5-10 pagina's met custom design",
+          "CMS voor menu, diensten en prijzen zelf aanpassen",
+          "Google Maps, openingstijden, fotogalerij",
+          "WhatsApp-knop en klik om te bellen",
+          "Testimonials / reviews sectie",
+          "Lokale SEO en Google Mijn Bedrijf",
+          "Sociale media links (o.a. Instagram)",
+          "Uitgebreide SEO en snelle laadtijden"
         ]
       },
       "shop": {
         "title": "Webshop",
-        "price": "€2.500 - €5.000",
+        "price": "€2.000 - €3.500",
         "description": "Online verkopen met een professionele e-commerce oplossing.",
         "features": [
           "Productcatalogus",
@@ -215,33 +218,48 @@
       "projectType": {
         "label": "Type project",
         "placeholder": "Selecteer een optie",
+        "optional": "optioneel",
         "required": "Selecteer een projecttype",
         "options": {
+          "restaurant": "Restaurant / horeca",
+          "barber": "Kapsalon / kapper",
+          "coach": "Coach / therapeut",
+          "gym": "Gym / sportschool",
+          "nails": "Nagelstudio",
+          "dentist": "Tandarts",
+          "realtor": "Makelaar",
+          "local": "Lokaal bedrijf",
           "new": "Nieuwe website",
           "redesign": "Website redesign",
           "shop": "Webshop",
           "landing": "Landingspagina",
-          "app": "Web applicatie",
-          "portfolio": "Portfolio website",
           "other": "Anders"
         }
       },
       "budget": {
         "label": "Budget",
         "placeholder": "Selecteer een range",
+        "optional": "optioneel",
         "required": "Selecteer een budget range",
         "options": {
-          "low": "Minder dan €1.000",
-          "medium": "€1.000 - €2.500",
-          "high": "€2.500 - €5.000",
-          "veryHigh": "Meer dan €5.000"
+          "unsure": "Nog niet zeker",
+          "under500": "Minder dan €500",
+          "500to700": "€500 - €700",
+          "700to1200": "€700 - €1.200",
+          "1200to2000": "€1.200 - €2.000",
+          "2000to3500": "€2.000 - €3.500",
+          "over3500": "Meer dan €3.500"
         }
       },
       "message": {
         "label": "Vertel over je project",
         "placeholder": "Beschrijf wat voor website je nodig hebt, wat je verwachtingen zijn, en eventuele specifieke wensen die je hebt...",
+        "optional": "optioneel",
         "required": "Vertel iets over je project",
         "minLength": "Beschrijf je project iets uitgebreider (minimaal 20 karakters)"
+      },
+      "subject": {
+        "default": "Wil graag contact opnemen"
       },
       "submit": "Verstuur",
       "submitting": "Versturen...",

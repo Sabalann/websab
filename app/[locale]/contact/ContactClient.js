@@ -52,17 +52,7 @@ export default function ContactClient() {
       newErrors.email = t('form.email.invalid');
     }
     
-    if (!formData.projectType) {
-      newErrors.projectType = t('form.projectType.required');
-    }
-    
-    if (!formData.budget) {
-      newErrors.budget = t('form.budget.required');
-    }
-    
-    if (!formData.message.trim()) {
-      newErrors.message = t('form.message.required');
-    } else if (formData.message.trim().length < 20) {
+    if (formData.message.trim() && formData.message.trim().length < 20) {
       newErrors.message = t('form.message.minLength');
     }
     
@@ -89,16 +79,14 @@ export default function ContactClient() {
       submitData.append("phone", formData.phone || "Not provided");
       submitData.append("company", formData.company || "Not provided");
       submitData.append("website", formData.website || "Not provided");
-      submitData.append("subject", `New project request (${locale}): ${formData.projectType}`);
+      submitData.append("subject", `Contact (${locale}): ${formData.projectType || t('form.subject.default')}`);
       
       // Create formatted message
-      const message = `
-Project Type: ${formData.projectType}
-Budget: ${formData.budget}
-
-Project Description:
-${formData.message}
-      `.trim();
+      const message = [
+        formData.projectType && `Project Type: ${formData.projectType}`,
+        formData.budget && `Budget: ${formData.budget}`,
+        (formData.message.trim() ? `Project Description:\n${formData.message.trim()}` : null)
+      ].filter(Boolean).join('\n\n') || t('form.subject.default');
       
       submitData.append("message", message);
       
@@ -258,7 +246,7 @@ ${formData.message}
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
                       <label htmlFor="projectType" className="block text-sm font-medium mb-2">
-                        {t('form.projectType.label')} <span className="text-red-500">*</span>
+                        {t('form.projectType.label')} <span className="text-gray-500 font-normal">({t('form.projectType.optional')})</span>
                       </label>
                       <select
                         id="projectType"
@@ -272,12 +260,18 @@ ${formData.message}
                         } bg-white focus:ring-2 focus:border-transparent transition-all outline-none`}
                       >
                         <option value="">{t('form.projectType.placeholder')}</option>
+                        <option value={t('form.projectType.options.restaurant')}>{t('form.projectType.options.restaurant')}</option>
+                        <option value={t('form.projectType.options.barber')}>{t('form.projectType.options.barber')}</option>
+                        <option value={t('form.projectType.options.coach')}>{t('form.projectType.options.coach')}</option>
+                        <option value={t('form.projectType.options.gym')}>{t('form.projectType.options.gym')}</option>
+                        <option value={t('form.projectType.options.nails')}>{t('form.projectType.options.nails')}</option>
+                        <option value={t('form.projectType.options.dentist')}>{t('form.projectType.options.dentist')}</option>
+                        <option value={t('form.projectType.options.realtor')}>{t('form.projectType.options.realtor')}</option>
+                        <option value={t('form.projectType.options.local')}>{t('form.projectType.options.local')}</option>
                         <option value={t('form.projectType.options.new')}>{t('form.projectType.options.new')}</option>
                         <option value={t('form.projectType.options.redesign')}>{t('form.projectType.options.redesign')}</option>
                         <option value={t('form.projectType.options.shop')}>{t('form.projectType.options.shop')}</option>
                         <option value={t('form.projectType.options.landing')}>{t('form.projectType.options.landing')}</option>
-                        <option value={t('form.projectType.options.app')}>{t('form.projectType.options.app')}</option>
-                        <option value={t('form.projectType.options.portfolio')}>{t('form.projectType.options.portfolio')}</option>
                         <option value={t('form.projectType.options.other')}>{t('form.projectType.options.other')}</option>
                       </select>
                       {errors.projectType && (
@@ -287,7 +281,7 @@ ${formData.message}
                     
                     <div>
                       <label htmlFor="budget" className="block text-sm font-medium mb-2">
-                        {t('form.budget.label')} <span className="text-red-500">*</span>
+                        {t('form.budget.label')} <span className="text-gray-500 font-normal">({t('form.budget.optional')})</span>
                       </label>
                       <select
                         id="budget"
@@ -301,10 +295,13 @@ ${formData.message}
                         } bg-white focus:ring-2 focus:border-transparent transition-all outline-none`}
                       >
                         <option value="">{t('form.budget.placeholder')}</option>
-                        <option value={t('form.budget.options.low')}>{t('form.budget.options.low')}</option>
-                        <option value={t('form.budget.options.medium')}>{t('form.budget.options.medium')}</option>
-                        <option value={t('form.budget.options.high')}>{t('form.budget.options.high')}</option>
-                        <option value={t('form.budget.options.veryHigh')}>{t('form.budget.options.veryHigh')}</option>
+                        <option value={t('form.budget.options.unsure')}>{t('form.budget.options.unsure')}</option>
+                        <option value={t('form.budget.options.under500')}>{t('form.budget.options.under500')}</option>
+                        <option value={t('form.budget.options.500to700')}>{t('form.budget.options.500to700')}</option>
+                        <option value={t('form.budget.options.700to1200')}>{t('form.budget.options.700to1200')}</option>
+                        <option value={t('form.budget.options.1200to2000')}>{t('form.budget.options.1200to2000')}</option>
+                        <option value={t('form.budget.options.2000to3500')}>{t('form.budget.options.2000to3500')}</option>
+                        <option value={t('form.budget.options.over3500')}>{t('form.budget.options.over3500')}</option>
                       </select>
                       {errors.budget && (
                         <p className="mt-2 text-sm text-red-500">{errors.budget}</p>
@@ -313,9 +310,9 @@ ${formData.message}
                   </div>
 
                   {/* Row 5: Message */}
-                  <div>
+                    <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      {t('form.message.label')} <span className="text-red-500">*</span>
+                      {t('form.message.label')} <span className="text-gray-500 font-normal">({t('form.message.optional')})</span>
                     </label>
                     <textarea
                       id="message"

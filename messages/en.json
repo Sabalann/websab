@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Sab - Web Developer",
-    "description": "I build websites that appeal to both you and your customers."
+    "title": "Apeldoorn Web Developer | Affordable Websites for Local Businesses | Sab",
+    "description": "Freelance web developer in Apeldoorn. Affordable websites for restaurants, barbers, coaches. From €500. Get in touch."
   },
   "Navigation": {
     "home": "Home",
@@ -12,8 +12,8 @@
   },
   "Home": {
     "hero": {
-      "title": "Need a website?",
-      "subtitle": "I build websites that appeal to both you and your customers.",
+      "title": "Need a website for your business?",
+      "subtitle": "I build affordable, professional websites for businesses in Apeldoorn and the surrounding area.",
       "viewPortfolio": "View portfolio",
       "viewPricing": "View pricing"
     },
@@ -21,7 +21,7 @@
       "title": "Why choose me?",
       "personalApproach": {
         "title": "Personal Approach",
-        "description": "I work closely with you to understand exactly what you, and more importantly, your customers need. No standard templates, but a website that perfectly fits your business."
+        "description": "I work closely with local business owners to understand exactly what you and your customers need. No standard templates, but an affordable website that perfectly fits your business."
       },
       "focusResults": {
         "title": "Focus on Results",
@@ -44,7 +44,7 @@
     "hero": {
       "title": "Hey, I'm",
       "name": "Sab",
-      "subtitle": "As a web developer, I help entrepreneurs take their online presence to the next level."
+      "subtitle": "As a web developer, I help businesses in Apeldoorn and the Veluwe take their online presence to the next level."
     },
     "journey": {
       "title": "My Journey",
@@ -100,14 +100,14 @@
   },
   "Pricing": {
     "hero": {
-      "title": "Transparent pricing for your website",
-      "subtitle": "Website costs are difficult to determine in advance, as unexpected problems or adjustments can always occur. However, once the project is clear, we can make an estimate that works for both of us. Below you'll find an overview of what you can expect."
+      "title": "Affordable websites for businesses in Apeldoorn",
+      "subtitle": "Transparent pricing, no hidden costs. From €500. Once the project is clear, we make an estimate that works for both of us. Below you'll find an overview."
     },
     "cards": {
       "title": "Price Indications",
       "landing": {
         "title": "Landing Page",
-        "price": "€750 - €1,200",
+        "price": "€500 - €700",
         "description": "Perfect for promoting a product, service, or event.",
         "features": [
           "3 conversion-focused pages",
@@ -119,19 +119,22 @@
       "business": {
         "title": "Business Website",
         "badge": "Popular",
-        "price": "€1,500 - €2,500",
+        "price": "€700 - €1,200",
         "description": "A professional website for your business or portfolio.",
         "features": [
-          "5-10 pages",
-          "Custom design",
-          "CMS for self-editing",
-          "Comprehensive SEO",
-          "Animations & interactions"
+          "5-10 pages with custom design",
+          "CMS to update menu, services and prices yourself",
+          "Google Maps, opening hours, photo gallery",
+          "WhatsApp button and click-to-call",
+          "Testimonials / reviews section",
+          "Local SEO and Google Business Profile",
+          "Social media links (e.g. Instagram)",
+          "Comprehensive SEO and fast loading"
         ]
       },
       "shop": {
         "title": "E-commerce",
-        "price": "€2,500 - €5,000",
+        "price": "€2,000 - €3,500",
         "description": "Sell online with a professional e-commerce solution.",
         "features": [
           "Product catalog",
@@ -215,33 +218,48 @@
       "projectType": {
         "label": "Project Type",
         "placeholder": "Select an option",
+        "optional": "optional",
         "required": "Please select a project type",
         "options": {
+          "restaurant": "Restaurant / hospitality",
+          "barber": "Barber shop / salon",
+          "coach": "Coach / therapist",
+          "gym": "Gym / fitness",
+          "nails": "Nail studio",
+          "dentist": "Dentist",
+          "realtor": "Real estate agent",
+          "local": "Local business",
           "new": "New website",
           "redesign": "Website redesign",
           "shop": "E-commerce",
           "landing": "Landing page",
-          "app": "Web application",
-          "portfolio": "Portfolio website",
           "other": "Other"
         }
       },
       "budget": {
         "label": "Budget",
         "placeholder": "Select a range",
+        "optional": "optional",
         "required": "Please select a budget range",
         "options": {
-          "low": "Less than €1,000",
-          "medium": "€1,000 - €2,500",
-          "high": "€2,500 - €5,000",
-          "veryHigh": "More than €5,000"
+          "unsure": "Not sure yet",
+          "under500": "Less than €500",
+          "500to700": "€500 - €700",
+          "700to1200": "€700 - €1,200",
+          "1200to2000": "€1,200 - €2,000",
+          "2000to3500": "€2,000 - €3,500",
+          "over3500": "More than €3,500"
         }
       },
       "message": {
         "label": "Tell me about your project",
         "placeholder": "Describe what kind of website you need, your expectations, and any specific requirements you have...",
+        "optional": "optional",
         "required": "Please tell me about your project",
         "minLength": "Please describe your project in more detail (minimum 20 characters)"
+      },
+      "subject": {
+        "default": "Just want to get in touch"
       },
       "submit": "Send",
       "submitting": "Sending...",

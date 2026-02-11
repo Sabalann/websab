@@ -26,8 +26,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
     "name": "Sab - Web Developer",
     "alternateName": "Websab",
     "description": locale === 'nl' 
-      ? "Freelance webdeveloper gespecialiseerd in moderne, snelle en gebruiksvriendelijke websites. Expert in Next.js, React en Tailwind CSS."
-      : "Freelance web developer specialized in modern, fast and user-friendly websites. Expert in Next.js, React and Tailwind CSS.",
+      ? "Freelance webdeveloper in Apeldoorn. Betaalbare websites voor lokale ondernemers: restaurants, kappers, coaches. Vanaf €500."
+      : "Freelance web developer in Apeldoorn. Affordable websites for local businesses: restaurants, barbers, coaches. From €500.",
     "url": baseUrl,
     "logo": `${baseUrl}/logo-transparent-black.png`,
     "image": `${baseUrl}/profile.jpeg`,
@@ -36,18 +36,18 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
     "address": {
       "@type": "Place",
       "addressCountry": "NL",
-      "addressLocality": "Utrecht"
+      "addressLocality": "Apeldoorn"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 52.0907,
-      "longitude": 5.1214
+      "latitude": 52.2112,
+      "longitude": 5.9690
     },
     "areaServed": {
       "@type": "Country",
       "name": "Netherlands"
     },
-    "priceRange": "€€",
+    "priceRange": "€",
     "openingHours": "Mo-Fr 09:00-18:00",
     "sameAs": [
       "https://www.linkedin.com/in/sabalan-alaeiyeh/",
@@ -60,8 +60,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": 52.0907,
-        "longitude": 5.1214
+        "latitude": 52.2112,
+        "longitude": 5.9690
       },
       "geoRadius": "50000"
     },
@@ -80,8 +80,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
             "offers": {
               "@type": "AggregateOffer",
               "priceCurrency": "EUR",
-              "lowPrice": "750",
-              "highPrice": "1200"
+              "lowPrice": "500",
+              "highPrice": "700"
             }
           }
         },
@@ -96,8 +96,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
             "offers": {
               "@type": "AggregateOffer",
               "priceCurrency": "EUR",
-              "lowPrice": "1500",
-              "highPrice": "2500"
+              "lowPrice": "700",
+              "highPrice": "1200"
             }
           }
         },
@@ -112,8 +112,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
             "offers": {
               "@type": "AggregateOffer",
               "priceCurrency": "EUR",
-              "lowPrice": "2500",
-              "highPrice": "5000"
+              "lowPrice": "2000",
+              "highPrice": "3500"
             }
           }
         }
@@ -173,8 +173,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
     "url": pageUrl || `${baseUrl}/${locale}`,
     "name": pageTitle || "Sab - Web Developer",
     "description": pageDescription || (locale === 'nl' 
-      ? "Ik bouw websites die niet alleen jou, maar ook jouw klanten aanspreken."
-      : "I build websites that appeal to both you and your customers."),
+      ? "Freelance webdeveloper in Apeldoorn. Betaalbare websites voor restaurants, kappers, coaches. Vanaf €500."
+      : "Freelance web developer in Apeldoorn. Affordable websites for restaurants, barbers, coaches. From €500."),
     "inLanguage": locale,
     "isPartOf": {
       "@type": "WebSite",
