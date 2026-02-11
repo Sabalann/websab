@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import { Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { ConvexClientProvider } from './ConvexClientProvider';
@@ -41,6 +42,7 @@ export default async function RootLayout({ children }) {
         <ConvexClientProvider>
           <NextIntlClientProvider messages={messages}>
             <Analytics />
+            <SpeedInsights />
             {children}
           </NextIntlClientProvider>
         </ConvexClientProvider>

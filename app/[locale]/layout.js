@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '../../i18n';
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
