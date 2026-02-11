@@ -2,6 +2,7 @@
   "name": "websab",
   "version": "0.1.0",
   "private": true,
+  "browserslist": ["baseline 2024"],
   "scripts": {
     "dev": "next dev --turbo",
     "dev:webpack": "next dev",

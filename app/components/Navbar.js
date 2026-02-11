@@ -27,6 +27,7 @@ export default function Navbar() {
                   alt="Logo" 
                   fill
                   className="object-contain"
+                  priority
                 />
               </Link>
             </div>

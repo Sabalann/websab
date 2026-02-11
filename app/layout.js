@@ -3,9 +3,7 @@ import { Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { locales } from '../i18n';
+import { getLocale, getMessages } from 'next-intl/server';
 import { ConvexClientProvider } from './ConvexClientProvider';
 import StructuredData from './components/StructuredData';
 
@@ -28,14 +26,9 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-export default async function RootLayout({ children, params }) {
-  const { locale } = await params || { locale: 'en' };
-  
-  // Validate locale
-  if (params?.locale && !locales.includes(params.locale)) {
-    notFound();
-  }
-  
+export default async function RootLayout({ children }) {
+  const locale = await getLocale();
+
   // Providing all messages to the client side is the easiest way
   const messages = await getMessages();
   

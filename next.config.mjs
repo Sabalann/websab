@@ -4,8 +4,10 @@ const withNextIntl = createNextIntlPlugin('./i18n.js');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'standalone', // You can keep or remove this line based on your deployment needs
-  
+  experimental: {
+    optimizePackageImports: ['next-intl', 'convex'],
+  },
+
   // Fix 404 errors: Redirect old /prijzen URL to new /kosten URL
   async redirects() {
     return [
