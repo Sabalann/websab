@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Website Apeldoorn | Betaalbare Websites voor Ondernemers | Sab",
-    "description": "Freelance webdeveloper in Apeldoorn. Betaalbare websites voor restaurants, kappers, coaches. Vanaf €500. Neem contact op."
+    "title": "Webdeveloper Apeldoorn | Betaalbare Websites voor Ondernemers | Sab",
+    "description": "Freelance webdeveloper, gevestigd in Apeldoorn. Betaalbare websites voor restaurants, kappers, coaches. Vanaf €500. Neem contact op."
   },
   "Navigation": {
     "home": "Home",
@@ -13,7 +13,7 @@
   "Home": {
     "hero": {
       "title": "Website nodig voor je bedrijf?",
-      "subtitle": "Ik bouw betaalbare, professionele websites voor ondernemers in Apeldoorn en omgeving.",
+      "subtitle": "Ik bouw betaalbare, professionele websites voor ondernemers.",
       "viewPortfolio": "Bekijk portfolio",
       "viewPricing": "Bekijk kosten"
     },
@@ -21,7 +21,7 @@
       "title": "Waarom voor mij kiezen?",
       "personalApproach": {
         "title": "Persoonlijke aanpak",
-        "description": "Ik werk nauw samen met lokale ondernemers om precies te begrijpen wat jij en jouw klanten nodig hebben. Geen standaard templates, maar een betaalbare website die perfect past bij jouw bedrijf."
+        "description": "Ik werk nauw samen met ondernemers om precies te begrijpen wat jij en jouw klanten nodig hebben. Geen standaard templates, maar een betaalbare website die perfect past bij jouw bedrijf."
       },
       "focusResults": {
         "title": "Focus op resultaat",
@@ -44,7 +44,7 @@
     "hero": {
       "title": "Hey, ik ben",
       "name": "Sab",
-      "subtitle": "Als web developer help ik ondernemers in Apeldoorn en de Veluwe hun online aanwezigheid naar het volgende niveau te tillen."
+      "subtitle": "Als web developer gevestigd in Apeldoorn help ik ondernemers hun online aanwezigheid naar het volgende niveau tillen."
     },
     "journey": {
       "title": "Mijn Reis",
@@ -100,7 +100,7 @@
   },
   "Pricing": {
     "hero": {
-      "title": "Betaalbare websites voor ondernemers in Apeldoorn",
+      "title": "Betaalbare websites voor ondernemers",
       "subtitle": "Transparante prijzen, geen verborgen kosten. Vanaf €500. Nadat het project duidelijk is, maken we een schatting waar we allebei vanuit kunnen gaan. Hieronder vind je een overzicht."
     },
     "cards": {

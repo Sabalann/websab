@@ -26,8 +26,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
     "name": "Sab - Web Developer",
     "alternateName": "Websab",
     "description": locale === 'nl' 
-      ? "Freelance webdeveloper in Apeldoorn. Betaalbare websites voor lokale ondernemers: restaurants, kappers, coaches. Vanaf €500."
-      : "Freelance web developer in Apeldoorn. Affordable websites for local businesses: restaurants, barbers, coaches. From €500.",
+      ? "Freelance webdeveloper gevestigd in Apeldoorn. Betaalbare websites voor ondernemers: restaurants, kappers, coaches. Vanaf €500."
+      : "Freelance web developer based in Apeldoorn. Affordable websites for businesses: restaurants, barbers, coaches. From €500.",
     "url": baseUrl,
     "logo": `${baseUrl}/logo-transparent-black.png`,
     "image": `${baseUrl}/profile.jpeg`,
@@ -173,8 +173,8 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
     "url": pageUrl || `${baseUrl}/${locale}`,
     "name": pageTitle || "Sab - Web Developer",
     "description": pageDescription || (locale === 'nl' 
-      ? "Freelance webdeveloper in Apeldoorn. Betaalbare websites voor restaurants, kappers, coaches. Vanaf €500."
-      : "Freelance web developer in Apeldoorn. Affordable websites for restaurants, barbers, coaches. From €500."),
+      ? "Freelance webdeveloper gevestigd in Apeldoorn. Betaalbare websites voor restaurants, kappers, coaches. Vanaf €500."
+      : "Freelance web developer based in Apeldoorn. Affordable websites for restaurants, barbers, coaches. From €500."),
     "inLanguage": locale,
     "isPartOf": {
       "@type": "WebSite",

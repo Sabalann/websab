@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Apeldoorn Web Developer | Affordable Websites for Local Businesses | Sab",
-    "description": "Freelance web developer in Apeldoorn. Affordable websites for restaurants, barbers, coaches. From €500. Get in touch."
+    "title": "Web Developer in Apeldoorn | Affordable Websites for Businesses | Sab",
+    "description": "Freelance web developer based in Apeldoorn. Affordable websites for restaurants, barbers, coaches. From €500. Get in touch."
   },
   "Navigation": {
     "home": "Home",
@@ -13,7 +13,7 @@
   "Home": {
     "hero": {
       "title": "Need a website for your business?",
-      "subtitle": "I build affordable, professional websites for businesses in Apeldoorn and the surrounding area.",
+      "subtitle": "I build affordable, professional websites for small businesses.",
       "viewPortfolio": "View portfolio",
       "viewPricing": "View pricing"
     },
@@ -21,7 +21,7 @@
       "title": "Why choose me?",
       "personalApproach": {
         "title": "Personal Approach",
-        "description": "I work closely with local business owners to understand exactly what you and your customers need. No standard templates, but an affordable website that perfectly fits your business."
+        "description": "I work closely with business owners to understand exactly what you and your customers need. No standard templates, but an affordable website that perfectly fits your business."
       },
       "focusResults": {
         "title": "Focus on Results",
@@ -44,7 +44,7 @@
     "hero": {
       "title": "Hey, I'm",
       "name": "Sab",
-      "subtitle": "As a web developer, I help businesses in Apeldoorn and the Veluwe take their online presence to the next level."
+      "subtitle": "As a web developer based in Apeldoorn, I help businesses take their online presence to the next level."
     },
     "journey": {
       "title": "My Journey",
@@ -100,7 +100,7 @@
   },
   "Pricing": {
     "hero": {
-      "title": "Affordable websites for businesses in Apeldoorn",
+      "title": "Affordable websites for small businesses",
       "subtitle": "Transparent pricing, no hidden costs. From €500. Once the project is clear, we make an estimate that works for both of us. Below you'll find an overview."
     },
     "cards": {
