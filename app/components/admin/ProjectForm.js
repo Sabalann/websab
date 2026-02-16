@@ -181,6 +181,7 @@ export default function ProjectForm({ initialData, onSubmit, submitLabel = "Save
           value={formData.media.url}
           onChange={(url) => handleMediaChange("url", url)}
           accept={formData.media.type === "video" ? "video/*" : "image/*"}
+          isVideo={formData.media.type === "video"}
         />
 
         {formData.media.type === "video" && (

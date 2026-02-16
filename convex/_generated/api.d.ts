@@ -11,6 +11,7 @@
 import type * as auth from "../auth.js";
 import type * as projects from "../projects.js";
 import type * as seedProjects from "../seedProjects.js";
+import type * as storage from "../storage.js";
 
 import type {
   ApiFromModules,
@@ -22,6 +23,7 @@ declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   projects: typeof projects;
   seedProjects: typeof seedProjects;
+  storage: typeof storage;
 }>;
 
 /**

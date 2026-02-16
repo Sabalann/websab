@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useMutation, useConvex } from "convex/react";
+import { api } from "../../../convex/_generated/api";
 
-export default function ImageUpload({ value, onChange, label, accept = "image/*,video/*" }) {
+export default function ImageUpload({ value, onChange, label, accept = "image/*,video/*", isVideo = false }) {
   const [uploading, setUploading] = useState(false);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef(null);
+  const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
+  const convex = useConvex();
 
   const handleDrag = (e) => {
     e.preventDefault();
@@ -38,21 +42,22 @@ export default function ImageUpload({ value, onChange, label, accept = "image/*,
     setUploading(true);
 
     try {
-      const formData = new FormData();
-      formData.append("file", file);
-
-      const response = await fetch("/api/upload", {
+      const postUrl = await generateUploadUrl();
+      const result = await fetch(postUrl, {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": file.type },
+        body: file,
       });
 
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error || "Upload failed");
+      if (!result.ok) {
+        const err = await result.json().catch(() => ({}));
+        throw new Error(err.message || "Upload failed");
       }
 
-      const data = await response.json();
-      onChange(data.url);
+      const { storageId } = await result.json();
+      const url = await convex.query(api.storage.getStorageUrl, { storageId });
+      if (!url) throw new Error("Failed to get file URL");
+      onChange(url);
     } catch (error) {
       alert("Upload failed: " + error.message);
     } finally {
@@ -97,7 +102,7 @@ export default function ImageUpload({ value, onChange, label, accept = "image/*,
           <div className="space-y-4">
             {/* Preview */}
             <div className="flex justify-center">
-              {value.endsWith(".mp4") || value.endsWith(".webm") ? (
+              {isVideo || value.endsWith(".mp4") || value.endsWith(".webm") ? (
                 <video
                   src={value}
                   className="max-h-48 rounded-lg"
