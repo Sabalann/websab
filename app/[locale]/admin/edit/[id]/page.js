@@ -11,9 +11,9 @@ function EditProjectPage() {
   const router = useRouter();
   const params = useParams();
   const locale = params.locale || "en";
-  const projectId = params.id;
+  const docId = params.id;
   
-  const project = useQuery(api.projects.getProjectById, { id: projectId });
+  const project = useQuery(api.projects.getProjectByDocId, docId ? { _id: docId } : "skip");
   const updateProject = useMutation(api.projects.updateProject);
 
   const handleSubmit = async (formData) => {

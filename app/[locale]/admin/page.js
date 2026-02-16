@@ -115,11 +115,17 @@ function AdminDashboard() {
                   <td className="px-6 py-4">
                     <div className="flex items-center">
                       <div className="flex-shrink-0 h-10 w-10">
-                        <img
-                          className="h-10 w-10 rounded object-cover"
-                          src={project.media.thumbnail}
-                          alt={project.translations.en.title}
-                        />
+                        {(project.media.thumbnail || project.media.url) ? (
+                          <img
+                            className="h-10 w-10 rounded object-cover"
+                            src={project.media.thumbnail || project.media.url}
+                            alt={project.translations.en.title}
+                          />
+                        ) : (
+                          <div className="h-10 w-10 rounded bg-gray-100 flex items-center justify-center text-gray-400 text-xs">
+                            —
+                          </div>
+                        )}
                       </div>
                       <div className="ml-4">
                         <div className="text-sm font-medium text-gray-900">
@@ -168,7 +174,7 @@ function AdminDashboard() {
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <div className="flex justify-end gap-2">
                       <Link
-                        href={`/${locale}/admin/edit/${project.id}`}
+                        href={`/${locale}/admin/edit/${project._id}`}
                         className="text-green-600 hover:text-green-900"
                       >
                         Edit

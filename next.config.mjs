@@ -4,6 +4,12 @@ const withNextIntl = createNextIntlPlugin('./i18n.js');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: '*.convex.cloud', pathname: '/**' },
+      { protocol: 'https', hostname: '*.convex.site', pathname: '/**' },
+    ],
+  },
   experimental: {
     optimizePackageImports: ['next-intl', 'convex'],
   },

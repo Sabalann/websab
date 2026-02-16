@@ -95,9 +95,15 @@ export default function ProjectForm({ initialData, onSubmit, submitLabel = "Save
       return;
     }
 
+    // Normalize: for images, sync thumbnail with url if empty
+    const dataToSubmit = { ...formData };
+    if (dataToSubmit.media.type === "" && dataToSubmit.media.url && !dataToSubmit.media.thumbnail) {
+      dataToSubmit.media = { ...dataToSubmit.media, thumbnail: dataToSubmit.media.url };
+    }
+
     setLoading(true);
     try {
-      await onSubmit(formData);
+      await onSubmit(dataToSubmit);
     } catch (error) {
       alert("Error: " + error.message);
     } finally {
@@ -191,19 +197,6 @@ export default function ProjectForm({ initialData, onSubmit, submitLabel = "Save
             onChange={(url) => handleMediaChange("thumbnail", url)}
             accept="image/*"
           />
-        )}
-
-        {formData.media.type === "" && formData.media.url && (
-          <div className="hidden">
-            <input
-              type="hidden"
-              value={formData.media.url}
-              onChange={(e) => handleMediaChange("thumbnail", e.target.value)}
-            />
-            {/* Auto-sync thumbnail with url for images */}
-            {formData.media.thumbnail !== formData.media.url &&
-              handleMediaChange("thumbnail", formData.media.url)}
-          </div>
         )}
       </div>
 

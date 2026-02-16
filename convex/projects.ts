@@ -8,16 +8,22 @@ export const getAllProjects = query({
   },
 });
 
-// Get project by ID
+// Get project by ID (string slug)
 export const getProjectById = query({
   args: { id: v.string() },
   handler: async (ctx, args) => {
-    const project = await ctx.db
+    return await ctx.db
       .query("projects")
-      .filter((q) => q.eq(q.field("id"), args.id))
+      .withIndex("by_project_id", (q) => q.eq("id", args.id))
       .first();
-    
-    return project;
+  },
+});
+
+// Get project by Convex document ID (for admin edit)
+export const getProjectByDocId = query({
+  args: { _id: v.id("projects") },
+  handler: async (ctx, args) => {
+    return await ctx.db.get(args._id);
   },
 });
 

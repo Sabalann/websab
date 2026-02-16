@@ -3,7 +3,7 @@ import { api } from "../../convex/_generated/api";
 
 export async function getAllProjects(locale = 'en') {
   const projects = await fetchQuery(api.projects.getAllProjects);
-  
+
   const allProjectsData = projects.map((project) => {
     const translation = project.translations[locale] || project.translations['en'];
     
