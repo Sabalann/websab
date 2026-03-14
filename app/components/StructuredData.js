@@ -32,7 +32,7 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
     "logo": `${baseUrl}/logo-transparent-black.png`,
     "image": `${baseUrl}/profile.jpeg`,
     "telephone": "+31686072388", // Update with your actual phone number
-    "email": "s.alaeiyeh@gmail.com",
+    "email": "hello@websab.nl",
     "address": {
       "@type": "Place",
       "addressCountry": "NL",
@@ -136,7 +136,7 @@ export default function StructuredData({ type = 'website', locale = 'nl', pageTi
       : "Web developer specialized in Next.js, React and modern web technologies. Computer Science student at Utrecht University.",
     "url": baseUrl,
     "image": `${baseUrl}/profile.jpeg`,
-    "email": "s.alaeiyeh@gmail.com",
+    "email": "hello@websab.nl",
     "sameAs": [
       "https://www.linkedin.com/in/sabalan-alaeiyeh/",
       "https://github.com/Sabalann"

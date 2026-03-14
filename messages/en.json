@@ -269,13 +269,13 @@
       },
       "error": {
         "title": "Something went wrong",
-        "message": "Please try again or send an email directly to s.alaeiyeh@gmail.com"
+        "message": "Please try again or send an email directly to hello@websab.nl"
       }
     },
     "info": {
       "title": "Contact Information",
       "email": "Email",
-      "emailValue": "s.alaeiyeh@gmail.com",
+      "emailValue": "hello@websab.nl",
       "linkedin": "LinkedIn",
       "linkedinLabel": "Connect on LinkedIn",
       "linkedinUrl": "https://www.linkedin.com/in/sabalan-alaeiyeh/",

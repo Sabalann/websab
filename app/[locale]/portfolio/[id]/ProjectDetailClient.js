@@ -65,6 +65,14 @@ export default function ProjectDetailClient({ id }) {
                     App Support
                   </Link>
                 )}
+                {decodedId === "stillhere" && (
+                  <Link
+                    href={`/${locale}/stillhere-support`}
+                    className="px-4 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded-full transition-colors font-medium"
+                  >
+                    App Support
+                  </Link>
+                )}
               </div>
             </ScrollAnimation>
             <div

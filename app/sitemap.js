@@ -123,6 +123,18 @@ export default async function sitemap() {
       lastModified: new Date('2025-01-15'),
       changeFrequency: 'yearly',
       priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/${locale}/stillhere-support`,
+      lastModified: new Date('2026-03-14'),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/${locale}/stillhere-privacy`,
+      lastModified: new Date('2026-03-14'),
+      changeFrequency: 'yearly',
+      priority: 0.3,
     }
   ]);
 

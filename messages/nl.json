@@ -269,13 +269,13 @@
       },
       "error": {
         "title": "Er is iets misgegaan",
-        "message": "Probeer het opnieuw of stuur direct een email naar s.alaeiyeh@gmail.com"
+        "message": "Probeer het opnieuw of stuur direct een email naar hello@websab.nl"
       }
     },
     "info": {
       "title": "Contact informatie",
       "email": "Email",
-      "emailValue": "s.alaeiyeh@gmail.com",
+      "emailValue": "hello@websab.nl",
       "linkedin": "LinkedIn",
       "linkedinLabel": "Bekijk mijn LinkedIn",
       "linkedinUrl": "https://www.linkedin.com/in/sabalan-alaeiyeh/",

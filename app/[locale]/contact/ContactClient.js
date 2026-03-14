@@ -386,7 +386,7 @@ export default function ContactClient() {
                   </div>
                   <h3 className="text-lg font-bold mb-2">{t('info.email')}</h3>
                   <a
-                    href="mailto:s.alaeiyeh@gmail.com"
+                    href="mailto:hello@websab.nl"
                     className="text-green-600 text-sm hover:text-green-700 transition-colors"
                   >
                     {t('info.emailValue')}

@@ -34,22 +34,6 @@ const nextConfig = {
       },
     ];
   },
-  
-  webpack: (config, { isServer }) => {
-    config.module.rules.push({
-      test: /\.mdx?$/,
-      use: [
-        {
-          loader: '@mdx-js/loader',
-          /** @type {import('@mdx-js/loader').Options} */
-          options: {
-            providerImportSource: '@mdx-js/react',
-          },
-        },
-      ],
-    });
-    return config;
-  },
 };
 
 export default withNextIntl(nextConfig);
