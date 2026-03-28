@@ -73,6 +73,22 @@ export default function ProjectDetailClient({ id }) {
                     App Support
                   </Link>
                 )}
+                {decodedId === "presented" && (
+                  <>
+                    <Link
+                      href={`/${locale}/presented-privacy`}
+                      className="px-4 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded-full transition-colors font-medium"
+                    >
+                      Privacy Policy
+                    </Link>
+                    <Link
+                      href={`/${locale}/presented-terms`}
+                      className="px-4 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded-full transition-colors font-medium"
+                    >
+                      Terms of Use
+                    </Link>
+                  </>
+                )}
               </div>
             </ScrollAnimation>
             <div
