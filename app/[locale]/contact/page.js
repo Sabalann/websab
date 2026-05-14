@@ -24,11 +24,13 @@ export async function generateMetadata({ params }) {
       alternateLocale: locale === 'nl' ? 'en' : 'nl',
       type: 'website',
       url: `${baseUrl}/${locale}/contact`,
+      images: [{ url: `${baseUrl}/profile.jpeg`, width: 800, height: 1200, alt: 'Sab - Webdeveloper Apeldoorn' }],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('hero.title'),
       description: t('hero.subtitle'),
+      images: [`${baseUrl}/profile.jpeg`],
     }
   };
 }

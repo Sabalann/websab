@@ -5,7 +5,6 @@ import { api } from "../../../../convex/_generated/api";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ScrollAnimation } from "../../../components/ScrollAnimation";
-import Navbar from "../../../components/Navbar";
 import ProjectMedia from "../../../components/ProjectMedia";
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -37,7 +36,6 @@ export default function ProjectDetailClient({ id }) {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <ScrollAnimation>

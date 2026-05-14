@@ -14,7 +14,9 @@ export async function generateMetadata({ params }) {
   const baseUrl = 'https://websab.nl';
   
   return {
-    title: t('hero.title'),
+    title: locale === 'nl'
+      ? `${t('hero.title')} | Webdeveloper Apeldoorn | Sab`
+      : `${t('hero.title')} | Web Developer Apeldoorn | Sab`,
     description: t('hero.subtitle'),
     alternates: {
       canonical: `${baseUrl}/${locale}/portfolio`,
@@ -29,6 +31,15 @@ export async function generateMetadata({ params }) {
       description: t('hero.subtitle'),
       locale: locale,
       alternateLocale: locale === 'nl' ? 'en' : 'nl',
+      type: 'website',
+      url: `${baseUrl}/${locale}/portfolio`,
+      images: [{ url: `${baseUrl}/profile.jpeg`, width: 800, height: 1200, alt: 'Sab - Webdeveloper Apeldoorn' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('hero.title'),
+      description: t('hero.subtitle'),
+      images: [`${baseUrl}/profile.jpeg`],
     }
   };
 }
